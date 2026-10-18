@@ -109,7 +109,10 @@ ul{list-style:none}
 .f-note.show{display:block}
 .f-note.err{background:#fdecec;border-color:#f3c2c2;color:#a52222}
 .f-btn[disabled]{opacity:.6;cursor:not-allowed;box-shadow:none;transform:none}
-.f-hp{position:absolute!important;left:-5000px!important;width:1px;height:1px;overflow:hidden}
+.f-err{display:none;font-size:11.5px;font-weight:600;color:#c0392b;margin-top:.35rem}
+.f-group.bad .f-err{display:block}
+.f-group.bad input,.f-group.bad select,.f-group.bad textarea{border-color:#e07070;background:#fffafa}
+.f-group.bad label{color:#c0392b}
 
 .c-map{margin-top:2.8rem}
 .c-map .frame{position:relative;border-radius:18px;overflow:hidden;border:1px solid #e9e6e2;box-shadow:0 12px 34px rgba(0,0,0,.10)}
@@ -335,9 +338,9 @@ footer{background:var(--foot)}
       <form class="c-form" id="cForm" novalidate action="https://wa.me/919620585890" method="get" target="_blank" rel="noopener">
         <div class="f-row">
           <div class="f-group"><label for="fName">Full Name *</label><input type="text" id="fName" name="name" required placeholder="Your name"></div>
-          <div class="f-group"><label for="fPhone">Phone *</label><input type="tel" id="fPhone" name="phone" required placeholder="+91 XXXXX XXXXX"></div>
+          <div class="f-group" id="gPhone"><label for="fPhone">Phone *</label><input type="tel" id="fPhone" name="phone" required inputmode="numeric" autocomplete="tel" title="Enter a valid 10-digit mobile number" placeholder="10-digit mobile number"><div class="f-err" id="ePhone">Enter a valid 10-digit mobile number.</div></div>
         </div>
-        <div class="f-group"><label for="fEmail">Email</label><input type="email" id="fEmail" name="email" placeholder="you@email.com"></div>
+        <div class="f-group" id="gEmail"><label for="fEmail">Email</label><input type="email" id="fEmail" name="email" autocomplete="email" title="Enter a valid email address" placeholder="you@email.com"><div class="f-err" id="eEmail">Enter a valid email address.</div></div>
         <div class="f-group"><label for="fInterest">I'm interested in</label>
           <select id="fInterest" name="interest">
             <option>Pushpa Layout</option>
@@ -445,6 +448,10 @@ footer{background:var(--foot)}
 
   var form = document.getElementById("cForm");
   var note = document.getElementById("fNote");
+  var phoneEl = document.getElementById("fPhone");
+  var emailEl = document.getElementById("fEmail");
+  var gPhone = document.getElementById("gPhone"), ePhone = document.getElementById("ePhone");
+  var gEmail = document.getElementById("gEmail"), eEmail = document.getElementById("eEmail");
   var WHATSAPP_NUMBER = "919620585890";
   var THANKS = "Opening WhatsApp — just tap Send there to deliver your enquiry. Our team will reply shortly.";
 
@@ -454,19 +461,57 @@ footer{background:var(--foot)}
     note.classList.add("show");
   }
 
+  function setFieldError(group, err, msg) {
+    if (msg) { group.classList.add("bad"); err.textContent = msg; }
+    else { group.classList.remove("bad"); }
+  }
+
+  /* Phone box: digits only (a single leading + survives while typing) */
+  phoneEl.addEventListener("input", function () {
+    var cleaned = phoneEl.value.replace(/[^\d+]/g, "").replace(/(?!^)\+/g, "");
+    if (cleaned !== phoneEl.value) { phoneEl.value = cleaned; }
+    if (gPhone.classList.contains("bad")) { setFieldError(gPhone, ePhone, ""); }
+  });
+
+  emailEl.addEventListener("input", function () {
+    if (gEmail.classList.contains("bad")) { setFieldError(gEmail, eEmail, ""); }
+  });
+
+  /* Accept +91 / 91 / 0 prefixes, then demand exactly 10 digits starting 6-9 */
+  function tenDigitPhone(raw) {
+    var d = raw.replace(/\D/g, "");
+    if (d.length === 12 && d.slice(0, 2) === "91") { d = d.slice(2); }
+    else if (d.length === 11 && d.charAt(0) === "0") { d = d.slice(1); }
+    return /^[6-9]\d{9}$/.test(d) ? d : "";
+  }
+
+  function validEmail(v) {
+    return /^[^\s@]+@[^\s@]+\.[A-Za-z]{2,}$/.test(v);
+  }
+
   /* Hand the enquiry straight to WhatsApp (app on mobile, WhatsApp Web on desktop) */
   form.addEventListener("submit", function (e) {
     e.preventDefault();
-    if (!form.checkValidity()) { form.reportValidity(); return; }
     if (form.dataset.busy === "1") { return; }
-    form.dataset.busy = "1";
-    setTimeout(function () { form.dataset.busy = ""; }, 1500);
 
     var name = document.getElementById("fName").value.trim();
-    var phone = document.getElementById("fPhone").value.trim();
-    var email = document.getElementById("fEmail").value.trim();
+    var phone = tenDigitPhone(phoneEl.value);
+    var email = emailEl.value.trim();
     var interest = document.getElementById("fInterest").value;
     var message = document.getElementById("fMsg").value.trim();
+
+    var emailBad = email !== "" && !validEmail(email);
+    setFieldError(gPhone, ePhone, phone ? "" : "Enter a valid 10-digit mobile number (must start with 6, 7, 8 or 9).");
+    setFieldError(gEmail, eEmail, emailBad ? "Enter a valid email address, e.g. name@example.com" : "");
+
+    if (!phone) { phoneEl.focus(); return; }
+    if (emailBad) { emailEl.focus(); return; }
+    if (!form.checkValidity()) { form.reportValidity(); return; }
+
+    phoneEl.value = phone; /* keep only the clean 10 digits */
+
+    form.dataset.busy = "1";
+    setTimeout(function () { form.dataset.busy = ""; }, 1500);
 
     var lines = [
       "*New Website Enquiry - SmartCity Infra Developers*",
