@@ -1,0 +1,101 @@
+/* ============================================================
+   SmartCity — PWA / mobile enhancements
+   Install banner, iOS help, standalone (installed-app) polish
+   ============================================================ */
+
+/* ---------- In-app "Install App" banner ---------- */
+.pwa-install{
+  position:fixed;
+  left:1rem;
+  right:1rem;
+  bottom:calc(78px + env(safe-area-inset-bottom));
+  z-index:130;
+  display:flex;
+  align-items:center;
+  gap:.7rem;
+  padding:.7rem .8rem;
+  border-radius:16px;
+  background:rgba(255,255,255,.99);
+  color:#333;
+  border:1px solid rgba(0,0,0,.06);
+  box-shadow:0 14px 38px rgba(0,0,0,.22);
+  font-family:var(--f-body,'Montserrat',system-ui,sans-serif);
+  opacity:0;
+  transform:translateY(150%);
+  transition:transform .38s cubic-bezier(.2,.8,.2,1),opacity .38s ease;
+  pointer-events:none;
+  visibility:hidden;
+}
+.pwa-install.show{
+  opacity:1;
+  transform:translateY(0);
+  pointer-events:auto;
+  visibility:visible;
+}
+.pwa-install__icon{
+  width:44px;height:44px;flex:0 0 auto;border-radius:12px;
+  object-fit:contain;background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.14);
+}
+.pwa-install__txt{flex:1 1 auto;min-width:0}
+.pwa-install__txt b{display:block;font-size:.9rem;font-weight:700;color:#222;line-height:1.25}
+.pwa-install__txt span{display:block;font-size:.74rem;color:#7a7a7a;line-height:1.35;margin-top:2px}
+.pwa-install__go{
+  flex:0 0 auto;border:0;cursor:pointer;font-family:inherit;font-weight:700;
+  font-size:.82rem;color:#fff;background:var(--brand,#f58320);
+  padding:.55rem .95rem;border-radius:999px;white-space:nowrap;
+  transition:transform .2s ease,filter .2s ease;
+}
+.pwa-install__go:hover{filter:brightness(1.05)}
+.pwa-install__go:active{transform:scale(.95)}
+.pwa-install__x{
+  flex:0 0 auto;border:0;background:transparent;cursor:pointer;
+  color:#a2a2a2;font-size:1.15rem;line-height:1;padding:.2rem .35rem;border-radius:50%;
+}
+.pwa-install__x:hover{color:#666;background:rgba(0,0,0,.05)}
+
+@media (min-width:769px){
+  .pwa-install{
+    left:auto;right:1.4rem;
+    bottom:calc(1.2rem + env(safe-area-inset-bottom));
+    max-width:370px;
+  }
+}
+
+/* ---------- iOS "Add to Home Screen" help sheet ---------- */
+.pwa-help{
+  position:fixed;inset:0;z-index:200;display:none;
+  align-items:flex-end;justify-content:center;
+  background:rgba(0,0,0,.5);
+  -webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px);
+  font-family:var(--f-body,'Montserrat',system-ui,sans-serif);
+}
+.pwa-help.show{display:flex}
+.pwa-help__card{
+  width:100%;max-width:460px;background:#fff;border-radius:20px 20px 0 0;
+  padding:1.4rem 1.3rem calc(1.4rem + env(safe-area-inset-bottom));
+  box-shadow:0 -12px 40px rgba(0,0,0,.3);
+  animation:pwaUp .3s cubic-bezier(.2,.8,.2,1);
+}
+@keyframes pwaUp{from{transform:translateY(20px);opacity:.6}to{transform:translateY(0);opacity:1}}
+.pwa-help__card h3{margin:0 0 .35rem;font-size:1.05rem;color:#222}
+.pwa-help__card p{margin:0 0 .9rem;font-size:.85rem;color:#777;line-height:1.5}
+.pwa-help__card ol{margin:0;padding-left:1.2rem;font-size:.88rem;color:#444;line-height:1.9}
+.pwa-help__card ol b{color:#222}
+.pwa-help__card .pwa-help__share{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:20px;height:20px;vertical-align:-4px;color:#0a84ff;
+}
+.pwa-help__close{
+  margin-top:1.1rem;width:100%;border:0;cursor:pointer;font-family:inherit;
+  font-weight:700;font-size:.9rem;color:#fff;background:var(--brand,#f58320);
+  padding:.7rem;border-radius:12px;
+}
+
+/* ---------- Installed-app (standalone) polish ---------- */
+@media (display-mode: standalone){
+  /* keep fixed top UI clear of the status bar / notch */
+  .ux-progress{top:env(safe-area-inset-top)}
+}
+
+/* Nothing here should affect printing / very old browsers */
+@media print{ .pwa-install,.pwa-help{display:none !important} }

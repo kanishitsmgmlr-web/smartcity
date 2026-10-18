@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f58320">
+<meta name="robots" content="noindex">
+<title>Offline | SmartCity Infra Developers</title>
+<link rel="icon" type="image/png" sizes="192x192" href="assets/icons/icon-192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
+<style>
+  :root{--brand:#f58320;--brand-d:#df6800;--ink:#5a5b5d;--dark:#333}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{
+    min-height:100dvh;display:flex;flex-direction:column;align-items:center;justify-content:center;
+    gap:1.1rem;text-align:center;padding:2rem 1.4rem calc(2rem + env(safe-area-inset-bottom));
+    font-family:'Montserrat',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+    background:radial-gradient(1200px 600px at 50% -10%,rgba(245,131,32,.10),transparent 60%),#fff;
+  }
+  img{width:190px;max-width:60vw;height:auto}
+  h1{font-size:1.45rem;color:var(--dark);font-weight:700;line-height:1.25}
+  p{max-width:34ch;font-size:.95rem;line-height:1.6;color:#7a7a7a}
+  .off-ic{width:74px;height:74px;border-radius:50%;display:grid;place-items:center;
+    background:rgba(245,131,32,.12);color:var(--brand)}
+  .off-ic svg{width:38px;height:38px}
+  .btns{display:flex;flex-wrap:wrap;gap:.6rem;justify-content:center;margin-top:.4rem}
+  a.btn,button.btn{
+    font-family:inherit;font-size:.9rem;font-weight:700;border-radius:999px;padding:.7rem 1.35rem;
+    border:0;cursor:pointer;text-decoration:none;transition:transform .2s ease,filter .2s ease;
+  }
+  .btn--primary{background:var(--brand);color:#fff;box-shadow:0 8px 22px rgba(245,131,32,.35)}
+  .btn--ghost{background:#f1f1f1;color:#444}
+  a.btn:hover,button.btn:hover{filter:brightness(1.04)}
+  a.btn:active,button.btn:active{transform:scale(.96)}
+</style>
+</head>
+<body>
+  <img src="assets/img/logo.png" alt="SmartCity Infra Developers">
+  <div class="off-ic" aria-hidden="true">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 20h.01"/><path d="M5 12.5a10 10 0 0 1 14 0"/><path d="M8.5 15.8a5 5 0 0 1 7 0"/>
+      <path d="M2 8.8a15 15 0 0 1 20 0"/><path d="m2 2 20 20"/>
+    </svg>
+  </div>
+  <h1>You&rsquo;re offline</h1>
+  <p>It looks like you&rsquo;ve lost your internet connection. Pages you&rsquo;ve already visited still work.</p>
+  <div class="btns">
+    <button class="btn btn--primary" type="button" onclick="location.reload()">Try again</button>
+    <a class="btn btn--ghost" href="index.html">Go to Home</a>
+  </div>
+</body>
+</html>
