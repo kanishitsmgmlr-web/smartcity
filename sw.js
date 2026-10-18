@@ -1,4 +1,4 @@
-var CACHE = "smartcity-v10";
+var CACHE = "smartcity-v11";
 var CORE = [
   "./",
   "index.html",

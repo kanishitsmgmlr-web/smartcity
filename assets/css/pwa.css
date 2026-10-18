@@ -97,16 +97,11 @@
   .ux-progress{top:env(safe-area-inset-top)}
 }
 
-/* ---------- Installed-app only: keep the "Our Projects" cards aligned on phones ----------
+/* ---------- Installed-app only: keep the "Our Projects" cards tidy on phones ----------
    Scoped to display-mode:standalone so the normal website layout is untouched.
-   Cards get equal internal rhythm and their price/CTA row is pinned to the
-   bottom, so every card in a row lines up no matter how long its title is. */
+   Cards are one-per-row on phones; these rules keep the price / CTA row pinned
+   to the bottom and stop the spec columns from overflowing. */
 @media (display-mode: standalone) and (max-width:767px){
-  .proj-grid{align-items:stretch}
-  .pcard{height:100%}
-  .pcard .bd{height:100%}
-  .pcard h3{min-height:2.4em}
-  .pcard .loc{min-height:1.25em}
   .pcard .specs{grid-template-columns:repeat(3,minmax(0,1fr))}
   .pcard .specs span{overflow-wrap:anywhere}
   .pcard .foot{margin-top:auto;flex-wrap:wrap}
