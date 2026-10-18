@@ -107,6 +107,9 @@ ul{list-style:none}
 .f-btn:hover{background:var(--brand-d);box-shadow:0 10px 24px rgba(245,131,32,.35)}
 .f-note{display:none;margin-top:1rem;text-align:center;background:#e9f9ef;border:1px solid #bfe9cf;color:#1c7c44;font-size:.9rem;font-weight:600;border-radius:8px;padding:.8rem}
 .f-note.show{display:block}
+.f-note.err{background:#fdecec;border-color:#f3c2c2;color:#a52222}
+.f-btn[disabled]{opacity:.6;cursor:not-allowed;box-shadow:none;transform:none}
+.f-hp{position:absolute!important;left:-5000px!important;width:1px;height:1px;overflow:hidden}
 
 .c-map{margin-top:2.8rem}
 .c-map .frame{position:relative;border-radius:18px;overflow:hidden;border:1px solid #e9e6e2;box-shadow:0 12px 34px rgba(0,0,0,.10)}
@@ -329,7 +332,12 @@ footer{background:var(--foot)}
         </div>
       </div>
 
-      <form class="c-form" id="cForm" novalidate>
+      <form class="c-form" id="cForm" novalidate action="https://formsubmit.co/jagadeeshrpandith@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="New website enquiry — SmartCity Infra Developers">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://smartcitydevelopers.net/contact.html?sent=1">
+        <input type="text" name="_honey" class="f-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
         <div class="f-row">
           <div class="f-group"><label for="fName">Full Name *</label><input type="text" id="fName" name="name" required placeholder="Your name"></div>
           <div class="f-group"><label for="fPhone">Phone *</label><input type="tel" id="fPhone" name="phone" required placeholder="+91 XXXXX XXXXX"></div>
@@ -349,7 +357,7 @@ footer{background:var(--foot)}
         </div>
         <div class="f-group"><label for="fMsg">Message *</label><textarea id="fMsg" name="message" required placeholder="Tell us about the plot size or visit you'd like..."></textarea></div>
         <button class="f-btn" type="submit">Send Message</button>
-        <div class="f-note" id="fNote">Thank you! Your enquiry has been prepared — send it from your email app to complete.</div>
+        <div class="f-note" id="fNote">Thank you! Your enquiry has been sent — our team will get back to you shortly.</div>
       </form>
 
     </div>
@@ -438,21 +446,63 @@ footer{background:var(--foot)}
   document.getElementById("mClose").addEventListener("click", closeMenu);
 
   var form = document.getElementById("cForm");
+  var note = document.getElementById("fNote");
+  var fBtn = form.querySelector(".f-btn");
+  var fBtnLabel = fBtn ? fBtn.textContent : "";
+  var FORM_ENDPOINT = "https://formsubmit.co/ajax/jagadeeshrpandith@gmail.com";
+  var THANKS = "Thank you! Your enquiry has been sent — our team will get back to you shortly.";
+  var FAILED = "Sorry, we couldn't send that just now. Please call or WhatsApp us instead.";
+
+  function showNote(msg, isError) {
+    note.textContent = msg;
+    note.classList.toggle("err", !!isError);
+    note.classList.add("show");
+  }
+
   form.addEventListener("submit", function (e) {
     e.preventDefault();
     if (!form.checkValidity()) { form.reportValidity(); return; }
-    var n = document.getElementById("fName").value;
-    var p = document.getElementById("fPhone").value;
-    var em = document.getElementById("fEmail").value;
-    var it = document.getElementById("fInterest").value;
-    var ms = document.getElementById("fMsg").value;
-    var subject = encodeURIComponent("Site Visit Enquiry — SmartCity Infra Developers");
-    var body = encodeURIComponent(
-      "Name: " + n + "\nPhone: " + p + "\nEmail: " + em + "\nInterested in: " + it + "\n\nMessage:\n" + ms
-    );
-    window.location.href = "mailto:info@smartcitydevelopers.net?subject=" + subject + "&body=" + body;
-    document.getElementById("fNote").classList.add("show");
+
+    var payload = {
+      name: document.getElementById("fName").value,
+      phone: document.getElementById("fPhone").value,
+      email: document.getElementById("fEmail").value,
+      interest: document.getElementById("fInterest").value,
+      message: document.getElementById("fMsg").value,
+      _subject: "New website enquiry — SmartCity Infra Developers",
+      _template: "table"
+    };
+
+    if (fBtn) { fBtn.disabled = true; fBtn.textContent = "Sending..."; }
+    note.classList.remove("show", "err");
+
+    fetch(FORM_ENDPOINT, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", Accept: "application/json" },
+      body: JSON.stringify(payload)
+    })
+      .then(function (res) { return res.json().catch(function () { return {}; }); })
+      .then(function (data) {
+        if (data && (data.success === "true" || data.success === true)) {
+          form.reset();
+          showNote(THANKS, false);
+        } else {
+          showNote(FAILED, true);
+        }
+      })
+      .catch(function () { showNote(FAILED, true); })
+      .then(function () {
+        if (fBtn) { fBtn.disabled = false; fBtn.textContent = fBtnLabel; }
+      });
   });
+
+  /* No-JS fallback: FormSubmit redirects back here with ?sent=1 */
+  if (/[?&]sent=1/.test(window.location.search)) {
+    showNote(THANKS, false);
+    if (window.history && window.history.replaceState) {
+      window.history.replaceState(null, "", window.location.pathname);
+    }
+  }
 
   if ("serviceWorker" in navigator && (location.protocol === "https:" || location.hostname === "localhost" || location.hostname === "127.0.0.1")) {
     window.addEventListener("load", function () { navigator.serviceWorker.register("sw.js").catch(function () {}); });
