@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Block private / admin resources from indexing
+Disallow: /manifest.json
+Disallow: /sw.js
+
+# Sitemap location
+Sitemap: https://smartcitydevelopers.net/sitemap.xml

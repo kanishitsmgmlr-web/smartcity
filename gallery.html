@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f58320">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="SmartCity">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/icons/icon-192.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32.png">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
+<title>Gallery | SmartCity Infra Developers — Layout Imagery</title>
+<meta name="description" content="Browse SmartCity Infra Developers layout gallery — plot layouts, roads, parks and developments across Shivamogga, Karnataka.">
+<link rel="canonical" href="https://smartcitydevelopers.net/gallery.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SmartCity Infra Developers">
+<meta property="og:locale" content="en_IN">
+<meta property="og:url" content="https://smartcitydevelopers.net/gallery.html">
+<meta property="og:title" content="Gallery | SmartCity Infra Developers — Layout Imagery">
+<meta property="og:description" content="Browse SmartCity Infra Developers layout gallery — plot layouts, roads, parks and developments across Shivamogga, Karnataka.">
+<meta property="og:image" content="https://smartcitydevelopers.net/assets/img/smartcitydeveloper.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Gallery | SmartCity Infra Developers — Layout Imagery">
+<meta name="twitter:description" content="Browse SmartCity Infra Developers layout gallery — plot layouts, roads, parks and developments across Shivamogga, Karnataka.">
+<meta name="twitter:image" content="https://smartcitydevelopers.net/assets/img/smartcitydeveloper.png"><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --brand:#f58320;--brand-d:#df6800;
+  --ink:#5a5b5d;--dark:#333333;
+  --bg:#ffffff;--sec:#efefef;--foot:#e3e3e3;
+  --f-body:'Montserrat',sans-serif;--f-head:'Playfair Display',serif;--f-quote:'Playfair Display',serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--f-body);color:var(--ink);background:var(--bg);line-height:1.6;-webkit-tap-highlight-color:transparent}
+img{display:block;max-width:100%}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+.wrap{width:min(1200px,92%);margin-inline:auto}
+
+.site-header{position:fixed;top:0;left:0;right:0;z-index:60;display:flex;justify-content:flex-start;padding:0}
+.header-inner{position:relative;width:100%;display:flex;align-items:center;justify-content:space-between;gap:1rem;background:#fff;border-radius:0 0 50px 50px;box-shadow:0 0 14px rgba(0,0,0,.10);padding:0 clamp(1rem,2.5vw,2rem);height:74px;transition:height .3s,box-shadow .3s}
+.site-header.shrink .header-inner{height:54px;box-shadow:0 2px 10px rgba(0,0,0,.08)}
+.brand img{height:54px;width:auto;display:block}
+.h-social{display:flex;align-items:center;gap:.45rem;margin-left:1.1rem}
+.h-social a{width:32px;height:32px;border-radius:50%;display:grid;place-items:center;background:#f6f6f6;color:var(--ink);border:1px solid #e5e5e5;transition:.25s}
+.h-social svg{width:15px;height:15px}
+.h-social a:hover{background:var(--brand);color:#fff;border-color:var(--brand);transform:translateY(-2px)}
+.nav-main{position:absolute;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:.2rem}
+.nav-main a{padding:.55rem .6rem;font-size:12.5px;font-weight:500;text-transform:uppercase;letter-spacing:.2px;color:var(--ink);position:relative;white-space:nowrap}
+.nav-main a:hover,.nav-main a.on{color:var(--brand);font-weight:700}
+.nav-main a::after{content:"";position:absolute;left:.6rem;right:.6rem;bottom:.35rem;height:2px;background:var(--brand);transform:scaleX(0);transition:.25s;transform-origin:left}
+.nav-main a:hover::after{transform:scaleX(1)}
+.nav-burger{display:none;background:none;border:0;cursor:pointer;width:38px;height:38px;position:relative}
+.nav-burger i,.nav-burger i::before,.nav-burger i::after{content:"";position:absolute;left:7px;width:24px;height:3px;border-radius:2px;background:var(--brand);transition:.25s}
+.nav-burger i{top:18px}
+.nav-burger i::before{top:-8px}
+.nav-burger i::after{top:8px}
+
+.m-menu{position:fixed;inset:0;background:#fff;z-index:80;display:flex;flex-direction:column;justify-content:center;padding:2rem;opacity:0;visibility:hidden;transition:.3s}
+.m-menu.open{opacity:1;visibility:visible}
+.m-menu .close{position:absolute;top:1.2rem;right:1rem;background:none;border:0;font-size:2rem;color:var(--brand);cursor:pointer;line-height:1}
+.m-menu a{font-size:1.35rem;font-weight:700;color:var(--dark);padding:.72rem 0;border-bottom:1px solid #eee;text-transform:uppercase;letter-spacing:.5px}
+.m-menu a:hover,.m-menu a.on{color:var(--brand)}
+.m-menu .m-foot{margin-top:2rem;font-size:.9rem;color:var(--ink)}
+.m-menu .m-foot a{display:inline-block;font-size:.9rem;border:0;padding:0 .6rem 0 0;color:var(--brand);text-transform:none}
+
+.phero{position:relative;min-height:52vh;min-height:52svh;display:flex;align-items:center;background:#111;overflow:hidden}
+.phero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.phero .veil{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.42),rgba(0,0,0,.65))}
+.phero .wrap{position:relative;z-index:2;text-align:center;color:#fff;padding:8rem 0 4rem}
+.phero h1{font-family:var(--f-head);font-weight:400;font-size:clamp(2.6rem,6vw,4.2rem);line-height:1.15;text-shadow:0 4px 26px rgba(0,0,0,.5)}
+.phero p{font-family:var(--f-quote);font-style:italic;font-size:clamp(1.05rem,2.2vw,1.35rem);margin-top:.9rem;color:rgba(255,255,255,.92);font-weight:400}
+.curve{position:relative;z-index:3;margin-top:-34px;line-height:0;background:transparent;pointer-events:none}
+.curve svg{width:100%;height:58px;display:block;overflow:visible}
+
+.gal-sec{padding:4rem 0 4.4rem;background:var(--bg)}
+.gal-sec .lead{text-align:center;max-width:720px;margin:0 auto 2.4rem;font-size:.98rem}
+.gal{columns:3;column-gap:1.1rem}
+.gal a{position:relative;display:block;break-inside:avoid;margin-bottom:1.1rem;border-radius:14px;overflow:hidden;cursor:zoom-in;background:#e7e7e7;box-shadow:0 8px 20px rgba(0,0,0,.09)}
+.gal img{width:100%;transition:transform .5s ease}
+.gal a:hover img{transform:scale(1.07)}
+.gal .cap{position:absolute;inset:auto 0 0 0;padding:.7rem .9rem;font-size:11.5px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;color:#fff;background:linear-gradient(180deg,transparent,rgba(0,0,0,.72));opacity:0;transition:.3s}
+.gal a:hover .cap{opacity:1}
+
+.lb{position:fixed;inset:0;z-index:120;background:rgba(10,12,16,.94);display:grid;place-items:center;padding:2.6rem;opacity:0;visibility:hidden;transition:.25s}
+.lb.open{opacity:1;visibility:visible}
+.lb img{max-width:92vw;max-height:80vh;border-radius:10px;box-shadow:0 20px 60px rgba(0,0,0,.6);object-fit:contain}
+.lb .x{position:absolute;top:1rem;right:1.2rem;color:#fff;font-size:2.2rem;cursor:pointer;line-height:1;background:none;border:0}
+.lb .name{position:absolute;bottom:1.3rem;left:0;right:0;text-align:center;color:rgba(255,255,255,.85);font-size:.85rem;letter-spacing:.8px;text-transform:uppercase;font-weight:600}
+
+footer{background:var(--foot)}
+.fflex{display:grid;grid-template-columns:1fr 1fr 1fr 1fr 1fr;gap:2.4rem;padding:3.6rem 0 2.4rem}
+.fflex h3{font-family:var(--f-head);font-weight:500;font-size:1.5rem;color:var(--brand);margin-bottom:1rem}
+.fflex p{font-size:.9rem}
+.fflex ul li{margin-bottom:.5rem;font-size:.9rem}
+.fflex ul a:hover{color:var(--brand-d)}
+.fflex .abi img{height:46px;width:auto;margin-bottom:1rem}
+.fflex .con li{display:flex;gap:.55rem;margin-bottom:.7rem;font-size:.9rem}
+.fflex .con .ico{color:var(--brand);font-weight:700}
+.fflex .con a:hover{color:var(--brand-d)}
+.social{display:flex;gap:.6rem;margin-top:1rem}
+.social a{width:34px;height:34px;border-radius:6px;display:grid;place-items:center;color:var(--ink);background:#fff;font-size:.9rem;border:1px solid #d4d4d4;transition:.25s}
+.social a:hover{color:var(--brand);border-color:var(--brand)}
+.social svg{width:16px;height:16px}
+.fflex .btn{display:inline-block;margin-top:1rem;background:var(--brand);color:#fff;font-size:12.5px;font-weight:600;text-transform:uppercase;letter-spacing:.8px;padding:.75rem 1.6rem;border-radius:999px;transition:.25s}
+.fflex .btn:hover{background:var(--brand-d)}
+.fbottom{display:flex;align-items:center;gap:.8rem;flex-wrap:wrap;padding:1.1rem 0;border-top:1px solid #cecece;font-size:.85rem}
+.fbottom a{font-weight:600;color:var(--brand-d);display:inline-flex;align-items:center;gap:.8rem}
+.fbottom a+a::before{content:"";width:1px;height:14px;background:var(--brand)}
+.fcopy{padding:1rem 0;font-size:14px;font-weight:500;color:var(--ink);border-top:1px solid #cecece;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+.fcopy b{font-weight:800}
+
+@media (max-width:1040px){
+  .h-social{display:none}
+}
+@media (max-width:1020px){
+  .gal{columns:2}
+  .fflex{grid-template-columns:1fr 1fr;gap:2rem}
+}
+@media (max-width:767px){
+  .site-header{top:0}
+  .header-inner{height:60px;border-radius:0 0 30px 30px;padding:0 14px}
+  .brand img{height:46px}
+  .h-social{display:none}
+  .nav-main{display:none}
+  .nav-burger{display:block}
+  .curve{margin-top:-16px}
+  .curve svg{height:26px}
+  .phero{min-height:46vh}
+  .gal{columns:2;column-gap:.7rem}
+  .gal a{margin-bottom:.7rem;border-radius:10px}
+  .fflex{grid-template-columns:1fr}
+  .fcopy{flex-direction:column;gap:.4rem}
+}
+</style>
+<link rel="stylesheet" href="assets/css/ux.css?v=17">
+  <script type="application/ld+json">
+{
+    "@context":  "https://schema.org",
+    "@graph":  [
+                   {
+                       "url":  "https://smartcitydevelopers.net/gallery.html",
+                       "name":  "SmartCity Infra Developers - Layout Gallery",
+                       "@type":  "ImageGallery"
+                   },
+                   {
+                       "@type":  "BreadcrumbList",
+                       "itemListElement":  [
+                                               {
+                                                   "position":  1,
+                                                   "name":  "Home",
+                                                   "item":  "https://smartcitydevelopers.net/index.html",
+                                                   "@type":  "ListItem"
+                                               },
+                                               {
+                                                   "position":  2,
+                                                   "name":  "Gallery",
+                                                   "item":  "https://smartcitydevelopers.net/gallery.html",
+                                                   "@type":  "ListItem"
+                                               }
+                                           ]
+                   }
+               ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <a class="brand" href="index.html"><img src="assets/img/logo.png" alt="SmartCity Infra Developers logo"></a>
+    <div class="h-social" aria-label="Social media">
+      <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12z"/></svg></a>
+      <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg></a>
+      <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg></a>
+      <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.19a3.02 3.02 0 0 0-2.12-2.14C19.51 3.55 12 3.55 12 3.55s-7.51 0-9.38.5A3.02 3.02 0 0 0 .5 6.19C0 8.07 0 12 0 12s0 3.93.5 5.81a3.02 3.02 0 0 0 2.12 2.14c1.87.5 9.38.5 9.38.5s7.51 0 9.38-.5a3.02 3.02 0 0 0 2.12-2.14C24 15.93 24 12 24 12s0-3.93-.5-5.81zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg></a>
+    </div>
+    <nav class="nav-main" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="index.html#projects">Projects</a>
+      <a href="gallery.html" class="on">Gallery</a>
+      <a href="book-online.html">Book Online</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="nav-burger" id="burger" aria-label="Menu"><i></i></button>
+  </div>
+</header>
+
+<div class="m-menu" id="mMenu">
+  <button class="close" id="mClose" aria-label="Close">&#215;</button>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="index.html#projects">Projects</a>
+  <a href="gallery.html" class="on">Gallery</a>
+  <a href="book-online.html">Book Online</a>
+  <a href="partner-with-us.html">Partner With Us</a>
+  <a href="contact.html">Contact</a>
+  <div class="m-foot">
+    <a href="tel:+919620585890">+91 9620 585890</a><br>
+    <a href="mailto:info@smartcitydevelopers.net">info@smartcitydevelopers.net</a>
+  </div>
+</div>
+
+<section class="phero">
+  <img src="assets/img/hero/kent-tupas-2jfZ2Vj06sk-unsplash-scaled.jpg" alt="SmartCity layout gallery">
+  <div class="veil"></div>
+  <div class="wrap">
+    <h1>Layout Gallery</h1>
+    <p>Smart City Infra Developers &middot; Plots, roads &amp; green communities</p>
+  </div>
+</section>
+
+<div class="curve">
+  <svg viewBox="0 -8 1440 68" preserveAspectRatio="none"><path d="M0 52 V 14 Q 240 60 480 34 Q 720 8 960 34 Q 1200 60 1440 34 V52 Z" fill="#ffffff"></path></svg>
+</div>
+
+<section class="gal-sec">
+  <div class="wrap">
+    <span class="eyebrow">Layout Imagery</span>
+    <p class="lead">A glimpse of our plotted layouts and townships across Shivamogga &mdash; wide roads, green open spaces and ready-to-construct plots. Tap any image to view full size.</p>
+    <div class="gal" id="gal">
+      <a data-name="Pushpa Layout"><img src="assets/img/smartcitydeveloper1.png" alt="Pushpa Layout" loading="lazy"><span class="cap">Pushpa Layout</span></a>
+      <a data-name="Manohar Layout"><img src="assets/img/smartcitydeveloper2.png" alt="Manohar Layout" loading="lazy"><span class="cap">Manohar Layout</span></a>
+      <a data-name="Maruthi Residency Ph 1"><img src="assets/img/smartcitydeveloper3.png" alt="Maruthi Residency Phase 1" loading="lazy"><span class="cap">Maruthi Residency Ph 1</span></a>
+      <a data-name="Maruthi Residency Ph 2"><img src="assets/img/smartcitydeveloper4.png" alt="Maruthi Residency Phase 2" loading="lazy"><span class="cap">Maruthi Residency Ph 2</span></a>
+      <a data-name="Sri Sai Residency"><img src="assets/img/smartcitydeveloper5.png" alt="Sri Sai Residency" loading="lazy"><span class="cap">Sri Sai Residency</span></a>
+      <a data-name="Sharadeesh Layout"><img src="assets/img/smartcitydeveloper6.png" alt="Sharadeesh Layout" loading="lazy"><span class="cap">Sharadeesh Layout</span></a>
+      <a data-name="ShriShaila Township"><img src="assets/img/smartcitydeveloper7.png" alt="ShriShaila Township" loading="lazy"><span class="cap">ShriShaila Township</span></a>
+      <a data-name="Layout Development"><img src="assets/img/smartcitydeveloper8.png" alt="Layout development" loading="lazy"><span class="cap">Layout Development</span></a>
+      <a data-name="Layout Development"><img src="assets/img/smartcitydeveloper9.png" alt="Layout development" loading="lazy"><span class="cap">Layout Development</span></a>
+      <a data-name="Layout Development"><img src="assets/img/smartcitydeveloper10.png" alt="Layout development" loading="lazy"><span class="cap">Layout Development</span></a>
+      <a data-name="Site Development"><img src="assets/img/smartcitydeveloper11.png" alt="Site development" loading="lazy"><span class="cap">Site Development</span></a>
+      <a data-name="Plot Layout"><img src="assets/img/smartcitydeveloper12.png" alt="Plot layout" loading="lazy"><span class="cap">Plot Layout</span></a>
+      <a data-name="Open Plots"><img src="assets/img/smartcitydeveloper13.png" alt="Open plots" loading="lazy"><span class="cap">Open Plots</span></a>
+      <a data-name="Site Development"><img src="assets/img/smartcitydeveloper14.png" alt="Site development" loading="lazy"><span class="cap">Site Development</span></a>
+      <a data-name="Road Network"><img src="assets/img/smartcitydeveloper15.png" alt="Road network" loading="lazy"><span class="cap">Road Network</span></a>
+      <a data-name="Road Network"><img src="assets/img/smartcitydeveloper16.png" alt="Road network" loading="lazy"><span class="cap">Road Network</span></a>
+      <a data-name="Layout Development"><img src="assets/img/smartcitydeveloper17.png" alt="Layout development" loading="lazy"><span class="cap">Layout Development</span></a>
+      <a data-name="Layout Development"><img src="assets/img/smartcitydeveloper18.png" alt="Layout development" loading="lazy"><span class="cap">Layout Development</span></a>
+      <a data-name="Layout Development"><img src="assets/img/smartcitydeveloper19.png" alt="Layout development" loading="lazy"><span class="cap">Layout Development</span></a>
+      <a data-name="Site Development"><img src="assets/img/smartcitydeveloper20.png" alt="Site development" loading="lazy"><span class="cap">Site Development</span></a>
+      <a data-name="Plot Layout"><img src="assets/img/smartcitydeveloper21.png" alt="Plot layout" loading="lazy"><span class="cap">Plot Layout</span></a>
+      <a data-name="Layout Development"><img src="assets/img/smartcitydeveloper22.png" alt="Layout development" loading="lazy"><span class="cap">Layout Development</span></a>
+      <a data-name="Layout Development"><img src="assets/img/smartcitydeveloper23.png" alt="Layout development" loading="lazy"><span class="cap">Layout Development</span></a>
+      <a data-name="Site Development"><img src="assets/img/smartcitydeveloper24.png" alt="Site development" loading="lazy"><span class="cap">Site Development</span></a>
+      <a data-name="Park &amp; Greenery"><img src="assets/img/smartcitydeveloper25.png" alt="Park and greenery" loading="lazy"><span class="cap">Park &amp; Greenery</span></a>
+      <a data-name="Layout Development"><img src="assets/img/smartcitydeveloper26.png" alt="Layout development" loading="lazy"><span class="cap">Layout Development</span></a>
+      <a data-name="Site Development"><img src="assets/img/smartcitydeveloper27.png" alt="Site development" loading="lazy"><span class="cap">Site Development</span></a>
+      <a data-name="Plot Layout"><img src="assets/img/smartcitydeveloper28.png" alt="Plot layout" loading="lazy"><span class="cap">Plot Layout</span></a>
+      <a data-name="Layout Development"><img src="assets/img/smartcitydeveloper29.png" alt="Layout development" loading="lazy"><span class="cap">Layout Development</span></a>
+      <a data-name="Layout Development"><img src="assets/img/smartcitydeveloper30.png" alt="Layout development" loading="lazy"><span class="cap">Layout Development</span></a>
+      <a data-name="Layout Development"><img src="assets/img/smartcitydeveloper31.png" alt="Layout development" loading="lazy"><span class="cap">Layout Development</span></a>
+      <a data-name="Site Development"><img src="assets/img/smartcitydeveloper32.png" alt="Site development" loading="lazy"><span class="cap">Site Development</span></a>
+      <a data-name="Plot Layout"><img src="assets/img/smartcitydeveloper33.png" alt="Plot layout" loading="lazy"><span class="cap">Plot Layout</span></a>
+      <a data-name="Layout Development"><img src="assets/img/smartcitydeveloper34.png" alt="Layout development" loading="lazy"><span class="cap">Layout Development</span></a>
+      <a data-name="Layout Development"><img src="assets/img/smartcitydeveloper35.png" alt="Layout development" loading="lazy"><span class="cap">Layout Development</span></a>
+      <a data-name="Township Model"><img src="assets/img/smartcitydeveloper37.png" alt="Township model" loading="lazy"><span class="cap">Township Model</span></a>
+      <a data-name="Master Plan"><img src="assets/img/smartcitydeveloper.png" alt="Master plan" loading="lazy"><span class="cap">Master Plan</span></a>
+    </div>
+
+    <h3 class="gal-sub">Designs &amp; Plans</h3>
+    <div class="gal">
+      <a data-name="3D Layout"><img src="assets/img/1571040723layout.jpg" alt="3D layout" loading="lazy"><span class="cap">3D Layout</span></a>
+      <a data-name="3D Layout"><img src="assets/img/j711190690.3d-layout.231428l.jpg" alt="3D layout" loading="lazy"><span class="cap">3D Layout</span></a>
+      <a data-name="Plotting Design"><img src="assets/img/land-plotting-layout-design-500x500-1.jpg" alt="Plotting layout design" loading="lazy"><span class="cap">Plotting Design</span></a>
+      <a data-name="Plotting Project"><img src="assets/img/plotting-projects-250x250-1.jpg" alt="Plotting project" loading="lazy"><span class="cap">Plotting Project</span></a>
+      <a data-name="Layout Plan"><img src="assets/img/c53cc9b250fc65b209ac78b8e6508105-1.jpg" alt="Layout plan" loading="lazy"><span class="cap">Layout Plan</span></a>
+      <a data-name="Layout Plan"><img src="assets/img/d1a2747c05de80e1df3be321969685d4.jpg" alt="Layout plan" loading="lazy"><span class="cap">Layout Plan</span></a>
+      <a data-name="Layout Plan"><img src="assets/img/da86413d9c1d2fa2bdd1bffcc2504979.jpg" alt="Layout plan" loading="lazy"><span class="cap">Layout Plan</span></a>
+      <a data-name="Layout Plan"><img src="assets/img/22e2d8.jpg" alt="Layout plan" loading="lazy"><span class="cap">Layout Plan</span></a>
+      <a data-name="Design Studio"><img src="assets/img/architect-designer-desktop-frame-isolated-white-background-illustration-40379000.jpg" alt="Architect design studio" loading="lazy"><span class="cap">Design Studio</span></a>
+      <a data-name="Floor Plan"><img src="assets/img/architectural-background-with-floor-plan-pictures_csp37911781.jpg" alt="Floor plan" loading="lazy"><span class="cap">Floor Plan</span></a>
+      <a data-name="Layout Design"><img src="assets/img/furniture-architect-plan-background-flat-vector-4628373.jpg" alt="Layout design" loading="lazy"><span class="cap">Layout Design</span></a>
+      <a data-name="Technical Drawing"><img src="assets/img/depositphotos_11904755-stock-illustration-house-technical-draw-vector-blue.jpg" alt="Technical drawing" loading="lazy"><span class="cap">Technical Drawing</span></a>
+      <a data-name="Master Planning"><img src="assets/img/image-ser_1-500x500-1.jpg" alt="Master planning" loading="lazy"><span class="cap">Master Planning</span></a>
+      <a data-name="Township Reference"><img src="assets/img/chhoriya_r_m_dhariwal_township_akola_plotting-ridhora-akola-chhoriya_group.jpeg" alt="Township reference" loading="lazy"><span class="cap">Township Reference</span></a>
+    </div>
+
+    <h3 class="gal-sub">Community &amp; Infrastructure</h3>
+    <div class="gal">
+      <a data-name="City Vision"><img src="assets/img/depositphotos_6732170-stock-photo-glass-city.jpg" alt="City vision" loading="lazy"><span class="cap">City Vision</span></a>
+      <a data-name="Neighbourhood"><img src="assets/img/pngtree-fresh-.jpg" alt="Neighbourhood" loading="lazy"><span class="cap">Neighbourhood</span></a>
+      <a data-name="Civic Planning"><img src="assets/img/pngtree-simple-atmospheric-gradient-urban-construction-enterprise-ppt-background-image_260238.jpg" alt="Civic planning" loading="lazy"><span class="cap">Civic Planning</span></a>
+      <a data-name="Open Spaces"><img src="assets/img/istockphoto-1146963915-612x612-1.jpg" alt="Open spaces" loading="lazy"><span class="cap">Open Spaces</span></a>
+      <a data-name="Site Snapshot"><img src="assets/img/images.jpg" alt="Site snapshot" loading="lazy"><span class="cap">Site Snapshot</span></a>
+      <a data-name="Site Snapshot"><img src="assets/img/images-1.jpg" alt="Site snapshot" loading="lazy"><span class="cap">Site Snapshot</span></a>
+      <a data-name="Land Parcel"><img src="assets/img/estate1.jpg" alt="Land parcel" loading="lazy"><span class="cap">Land Parcel</span></a>
+      <a data-name="Infrastructure"><img src="assets/img/2.jpg" alt="Infrastructure" loading="lazy"><span class="cap">Infrastructure</span></a>
+      <a data-name="Infrastructure"><img src="assets/img/3.jpg" alt="Infrastructure" loading="lazy"><span class="cap">Infrastructure</span></a>
+      <a data-name="Civic Works"><img src="assets/img/6.jpg" alt="Civic works" loading="lazy"><span class="cap">Civic Works</span></a>
+      <a data-name="Civic Works"><img src="assets/img/9.jpg" alt="Civic works" loading="lazy"><span class="cap">Civic Works</span></a>
+      <a data-name="Community"><img src="assets/img/10.jpeg" alt="Community" loading="lazy"><span class="cap">Community</span></a>
+      <a data-name="Community"><img src="assets/img/11.jpg" alt="Community" loading="lazy"><span class="cap">Community</span></a>
+      <a data-name="Neighbourhood"><img src="assets/img/5217.jpg_860.jpg" alt="Neighbourhood" loading="lazy"><span class="cap">Neighbourhood</span></a>
+      <a data-name="Layout Overview"><img src="assets/img/7.png" alt="Layout overview" loading="lazy"><span class="cap">Layout Overview</span></a>
+    </div>
+  </div>
+</section>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Image viewer">
+  <button class="x" id="lbClose" aria-label="Close">&#215;</button>
+  <img id="lbImg" src="" alt="">
+  <div class="name" id="lbName"></div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="fflex">
+      <div class="abi">
+        <img src="assets/img/logo.png" alt="SmartCity Infra Developers">
+        <p>SmartCity Infra Developers provides high-standard plotted layouts and full townships. Building hopes, beauty and comfort across Karnataka.</p>
+        <a class="btn" href="contact.html">Book A Site Visit</a>
+      </div>
+      <div>
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="index.html#projects">Projects</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="book-online.html">Book Online</a></li>
+          <li><a href="partner-with-us.html">Partner With Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Projects</h3>
+        <ul>
+          <li><a href="pushpa.html">Pushpa Layout</a></li>
+          <li><a href="manohar-layout.html">Manohar Layout</a></li>
+          <li><a href="maruthi-phase-1.html">Maruthi Residency Ph 1</a></li>
+          <li><a href="maruthi-phase-2.html">Maruthi Residency Ph 2</a></li>
+          <li><a href="sri-sai.html">Sri Sai Residency</a></li>
+          <li><a href="sharadeesh-layout.html">Sharadeesh Layout</a></li>
+          <li><a href="sri-saila-township.html">ShriShaila Township</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Find Your Plot</h3>
+        <ul class="con">
+          <li><span class="ico">&#9873;</span><span>1st floor, BK Nayak Arcade,<br>Vandana Bakery &amp; Cycle Loka upstairs,<br>Savalanga main Road,<br>Shivamogga, Karnataka 577201</span></li>
+          <li><span class="ico">&#9742;</span><a href="tel:+919620585890">+91 9620 585890</a></li>
+          <li><span class="ico">&#9993;</span><a href="mailto:info@smartcitydevelopers.net">info@smartcitydevelopers.net</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Connect</h3>
+        <div class="social">
+          <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg></a>
+          <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12z"/></svg></a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg></a>
+          <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.19a3.02 3.02 0 0 0-2.12-2.14C19.51 3.55 12 3.55 12 3.55s-7.51 0-9.38.5A3.02 3.02 0 0 0 .5 6.19C0 8.07 0 12 0 12s0 3.93.5 5.81a3.02 3.02 0 0 0 2.12 2.14c1.87.5 9.38.5 9.38.5s7.51 0 9.38-.5a3.02 3.02 0 0 0 2.12-2.14C24 15.93 24 12 24 12s0-3.93-.5-5.81zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg></a>
+          <a href="https://wa.me/919620585890" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.5 0 1.47 1.07 2.9 1.22 3.1.15.2 2.1 3.2 5.1 4.49.71.3 1.27.49 1.7.63.72.23 1.37.2 1.88.12.58-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35zM12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 1 1 8.38 4.63zm8.42-18.3A11.82 11.82 0 0 0 12.04 0C5.5 0 .16 5.34.16 11.92c0 2.1.55 4.15 1.6 5.96L.05 24l6.27-1.64a11.9 11.9 0 0 0 5.72 1.46h.01c6.54 0 11.87-5.34 11.87-11.92 0-3.18-1.24-6.17-3.4-8.41z"/></svg></a>
+        </div>
+        <p style="margin-top:1rem;font-size:.9rem">Trusted since 2013. Freehold, registrable plots.</p>
+      </div>
+    </div>
+    <div class="fbottom">
+      <a href="tel:+919620585890">Book A Site Visit</a>
+    </div>
+    <div class="fcopy">
+      <span>&copy; 2026 SmartCity Infra Developers. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var header = document.getElementById("siteHeader");
+  window.addEventListener("scroll", function () {
+    header.classList.toggle("shrink", window.scrollY > 50);
+  }, { passive: true });
+
+  var burger = document.getElementById("burger"), menu = document.getElementById("mMenu");
+  function openMenu() { menu.classList.add("open"); document.body.style.overflow = "hidden"; }
+  function closeMenu() { menu.classList.remove("open"); document.body.style.overflow = ""; }
+  burger.addEventListener("click", openMenu);
+  document.getElementById("mClose").addEventListener("click", closeMenu);
+
+  var lb = document.getElementById("lb"), lbImg = document.getElementById("lbImg"), lbName = document.getElementById("lbName");
+  var links = document.querySelectorAll(".gal a");
+  links.forEach(function (a) {
+    a.addEventListener("click", function (e) {
+      e.preventDefault();
+      lbImg.src = a.querySelector("img").src;
+      lbName.textContent = a.getAttribute("data-name");
+      lb.classList.add("open");
+      document.body.style.overflow = "hidden";
+    });
+  });
+  function closeLb() { lb.classList.remove("open"); document.body.style.overflow = ""; }
+  document.getElementById("lbClose").addEventListener("click", closeLb);
+  lb.addEventListener("click", function (e) { if (e.target === lb) closeLb(); });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeLb(); });
+
+  if ("serviceWorker" in navigator && (location.protocol === "https:" || location.hostname === "localhost" || location.hostname === "127.0.0.1")) {
+    window.addEventListener("load", function () { navigator.serviceWorker.register("sw.js").catch(function () {}); });
+  }
+})();
+</script>
+<script src="assets/js/ux.js?v=5" defer></script>
+<nav class="m-nav" aria-label="Mobile navigation">
+  <a href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5M5.5 10v9a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-9"/></svg><span>Home</span></a>
+  <a href="about.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11.5V16"/><circle cx="12" cy="8" r="1" fill="currentColor" stroke="none"/></svg><span>About</span></a>
+  <a href="index.html#projects"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21V5a1 1 0 0 1 1-1h9a1 1 0 0 1 1 1v16M4 21h16M8 21v-4h3v4"/><path d="M8 8h1M8 12h1M11 9h1"/></svg><span>Projects</span></a>
+  <a href="gallery.html" class="on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="15" rx="2.5"/><circle cx="9" cy="10" r="2"/><path d="m4 17.5 4.5-4 3.5 3 4-4 4 3.5"/></svg><span>Gallery</span></a>
+  <a href="book-online.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="16" rx="2.5"/><path d="M8 2.8v3M16 2.8v3M3 9.5h18"/></svg><span>Book</span></a>
+  <a href="contact.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.5 3.5h2.4a1.5 1.5 0 0 1 1.5 1.3c.09.7.27 1.4.55 2.1a1.5 1.5 0 0 1-.34 1.58L9.5 10a12.5 12.5 0 0 0 4.5 4.5l1.5-1.1a1.5 1.5 0 0 1 1.58-.34c.7.28 1.4.46 2.1.55a1.5 1.5 0 0 1 1.3 1.5v2.4a1.5 1.5 0 0 1-1.63 1.5A17.5 17.5 0 0 1 4 5.13 1.5 1.5 0 0 1 6.5 3.5z"/></svg><span>Contact</span></a>
+</nav>
+</body>
+</html>

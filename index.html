@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f58320">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="SmartCity">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/icons/icon-192.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32.png">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
+<title>SmartCity Infra Developers | Premium Plots &amp; Townships — Shivamogga</title>
+<meta name="description" content="SmartCity Infra Developers — premium plots, layouts &amp; townships in Shivamogga, Karnataka. Clear titles, freehold land, ready to construct.">
+<link rel="canonical" href="https://smartcitydevelopers.net/index.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SmartCity Infra Developers">
+<meta property="og:locale" content="en_IN">
+<meta property="og:url" content="https://smartcitydevelopers.net/index.html">
+<meta property="og:title" content="SmartCity Infra Developers | Premium Plots &amp; Townships — Shivamogga">
+<meta property="og:description" content="SmartCity Infra Developers — premium plots, layouts &amp; townships in Shivamogga, Karnataka. Clear titles, freehold land, ready to construct.">
+<meta property="og:image" content="https://smartcitydevelopers.net/assets/img/hero/kailash-gyawali-A8A6sFI8344-unsplash-scaled.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SmartCity Infra Developers | Premium Plots &amp; Townships — Shivamogga">
+<meta name="twitter:description" content="SmartCity Infra Developers — premium plots, layouts &amp; townships in Shivamogga, Karnataka. Clear titles, freehold land, ready to construct.">
+<meta name="twitter:image" content="https://smartcitydevelopers.net/assets/img/hero/kailash-gyawali-A8A6sFI8344-unsplash-scaled.jpg"><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --brand:#f58320;--brand-d:#df6800;
+  --ink:#5a5b5d;--dark:#333333;
+  --bg:#ffffff;--sec:#efefef;--foot:#e3e3e3;
+  --wa:#25d366;
+  --f-body:'Montserrat',sans-serif;--f-head:'Playfair Display',serif;--f-quote:'Playfair Display',serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--f-body);color:var(--ink);background:var(--bg);line-height:1.6;-webkit-tap-highlight-color:transparent}
+img{display:block;max-width:100%}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+.wrap{width:min(1200px,92%);margin-inline:auto}
+
+/* ---------- header : floating white pill ---------- */
+.site-header{position:fixed;top:0;left:0;right:0;z-index:60;display:flex;justify-content:flex-start;padding:0}
+.header-inner{position:relative;width:100%;display:flex;align-items:center;justify-content:space-between;gap:1rem;background:#fff;border-radius:0 0 50px 50px;box-shadow:0 0 14px rgba(0,0,0,.10);padding:0 clamp(1rem,2.5vw,2rem);height:74px;transition:height .3s,box-shadow .3s}
+.site-header.shrink .header-inner{height:54px;box-shadow:0 2px 10px rgba(0,0,0,.08)}
+.brand img{height:54px;width:auto;display:block}
+.h-social{display:flex;align-items:center;gap:.45rem;margin-left:1.1rem}
+.h-social a{width:32px;height:32px;border-radius:50%;display:grid;place-items:center;background:#f6f6f6;color:var(--ink);border:1px solid #e5e5e5;transition:.25s}
+.h-social svg{width:15px;height:15px}
+.h-social a:hover{background:var(--brand);color:#fff;border-color:var(--brand);transform:translateY(-2px)}
+.nav-main{position:absolute;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:.2rem}
+.nav-main a{padding:.55rem .7rem;font-size:13px;font-weight:500;text-transform:uppercase;letter-spacing:.2px;color:var(--ink);position:relative}
+.nav-main a:hover,.nav-main a.on{color:var(--brand);font-weight:700}
+.nav-main a::after{content:"";position:absolute;left:.7rem;right:.7rem;bottom:.35rem;height:2px;background:var(--brand);transform:scaleX(0);transition:.25s;transform-origin:left}
+.nav-main a:hover::after{transform:scaleX(1)}
+.nav-burger{display:none;background:none;border:0;cursor:pointer;width:38px;height:38px;position:relative}
+.nav-burger i,.nav-burger i::before,.nav-burger i::after{content:"";position:absolute;left:7px;width:24px;height:3px;border-radius:2px;background:var(--brand);transition:.25s}
+.nav-burger i{top:18px}
+.nav-burger i::before{top:-8px}
+.nav-burger i::after{top:8px}
+
+/* ---------- fullscreen mobile menu ---------- */
+.m-menu{position:fixed;inset:0;background:#fff;z-index:80;display:flex;flex-direction:column;justify-content:center;padding:2rem;opacity:0;visibility:hidden;transition:.3s}
+.m-menu.open{opacity:1;visibility:visible}
+.m-menu .close{position:absolute;top:1.2rem;right:1rem;background:none;border:0;font-size:2rem;color:var(--brand);cursor:pointer;line-height:1}
+.m-menu a{font-size:1.4rem;font-weight:700;color:var(--dark);padding:.8rem 0;border-bottom:1px solid #eee;text-transform:uppercase;letter-spacing:.5px}
+.m-menu a:hover,.m-menu a.on{color:var(--brand)}
+.m-menu .m-foot{margin-top:2rem;font-size:.9rem;color:var(--ink)}
+.m-menu .m-foot a{display:inline-block;font-size:.9rem;border:0;padding:0 .6rem 0 0;color:var(--brand);text-transform:none}
+
+/* ---------- hero slider ---------- */
+.hero{position:relative;min-height:50vh;min-height:50svh;background:#111;overflow:hidden}
+.hero .slide{position:absolute;inset:0;opacity:0;transition:opacity 2.4s ease}
+.hero .slide.on{opacity:1}
+.hero .slide img{width:100%;height:100%;object-fit:cover;will-change:transform,filter}
+.hero .slide.on img{animation:kbC 8.5s cubic-bezier(.25,.55,.35,1) forwards}
+.hero .slide.on:nth-child(2) img{animation-name:kbL}
+.hero .slide.on:nth-child(3) img{animation-name:kbR}
+@keyframes kbC{0%{transform:scale(1.14) translate(0,0);filter:blur(12px)}45%{filter:blur(0)}100%{transform:scale(1.08) translate(0,0);filter:blur(0)}}
+@keyframes kbL{0%{transform:scale(1.16) translate(-1.6%,1%);filter:blur(12px)}45%{filter:blur(0)}100%{transform:scale(1.09) translate(-1%,0);filter:blur(0)}}
+@keyframes kbR{0%{transform:scale(1.16) translate(1.6%,-1%);filter:blur(12px)}45%{filter:blur(0)}100%{transform:scale(1.09) translate(1%,0);filter:blur(0)}}
+.hero .slide .quote{position:absolute;inset:0;z-index:4;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:#fff;padding:0 1.6rem;pointer-events:none}
+.hero .slide .quote::before{content:"\201C";font-family:var(--f-quote);font-size:clamp(3.6rem,8.5vw,6.1rem);line-height:.6;display:block;color:rgba(255,255,255,.85);margin-bottom:.7rem}
+.hero .slide .quote .qm{font-family:var(--f-quote);font-style:italic;font-weight:500;font-size:clamp(1.85rem,4.5vw,3.25rem);line-height:1.32;max-width:840px;letter-spacing:.01em;text-shadow:0 3px 22px rgba(0,0,0,.55),0 1px 4px rgba(0,0,0,.4)}
+.hero .slide .quote .ln{height:1px;width:70px;background:rgba(255,255,255,.9);margin:1.15rem auto .85rem;box-shadow:0 1px 6px rgba(0,0,0,.4)}
+.hero .slide .quote .by{font-size:12px;letter-spacing:.3em;text-transform:uppercase;font-weight:600;color:rgba(255,255,255,.92);text-shadow:0 1px 8px rgba(0,0,0,.5)}
+.hero .slide .quote::before,.hero .slide .quote .qm,.hero .slide .quote .ln,.hero .slide .quote .by{opacity:0}
+.hero .slide.on .quote::before{animation:qUp 1s cubic-bezier(.2,.7,.2,1) .15s forwards}
+.hero .slide.on .quote .qm{animation:qUp 1s cubic-bezier(.2,.7,.2,1) .3s forwards}
+.hero .slide.on .quote .ln{animation:qW .9s ease-out 1.15s forwards}
+.hero .slide.on .quote .by{animation:qUp .9s ease-out 1.35s forwards}
+@keyframes qUp{0%{opacity:0;transform:translateY(30px)}100%{opacity:1;transform:translateY(0)}}
+@keyframes qW{0%{opacity:0;transform:scaleX(0)}100%{opacity:1;transform:scaleX(1)}}
+.hero .dim{position:absolute;inset:0;background:radial-gradient(ellipse 62% 58% at 50% 50%,rgba(0,0,0,.38),transparent 72%),linear-gradient(180deg,rgba(0,0,0,.22),transparent 40%,rgba(0,0,0,.28))}
+.hero .fx{position:absolute;inset:0;z-index:3;width:100%;height:100%;display:none;pointer-events:none}
+.hero .arrows button{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.25);border:0;color:#fff;width:46px;height:46px;border-radius:50%;font-size:1.1rem;cursor:pointer;z-index:5;backdrop-filter:blur(4px);transition:.25s}
+.hero .arrows button:hover{background:var(--brand)}
+.hero .prev{left:1rem}.hero .next{right:1rem}
+.hero .dots{position:absolute;bottom:1.4rem;left:50%;transform:translateX(-50%);display:flex;gap:.5rem;z-index:5}
+.hero .dots span{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.55);cursor:pointer;transition:.25s}
+.hero .dots span.on{background:var(--brand);transform:scale(1.25)}
+
+/* ---------- curve divider ---------- */
+.curve{position:relative;z-index:3;margin-top:-34px;line-height:0;background:transparent;pointer-events:none}
+.curve svg{width:100%;height:58px;display:block;overflow:visible}
+
+/* ---------- welcome / stats ---------- */
+.welcome{padding:2rem 0 4rem;background:var(--bg)}
+.welcome .lead{max-width:880px;margin:1.2rem auto 0;text-align:center}
+.section-head{text-align:center}
+.section-head h1,.section-head h2{font-family:var(--f-head);font-weight:400;color:var(--brand);font-size:clamp(2.4rem,6vw,3.8rem);line-height:1.2}
+.section-head p{color:var(--ink);font-size:1.02rem}
+.stats{display:grid;grid-template-columns:repeat(6,1fr);gap:1rem;margin-top:2.8rem}
+.stat{text-align:center;padding:1.4rem .4rem}
+.stat .ic{width:58px;height:58px;margin:0 auto .6rem;border-radius:50%;background:rgba(245,131,32,.10);display:grid;place-items:center;color:var(--brand)}
+.stat .ic svg{width:27px;height:27px}
+.stat b{display:block;font-family:var(--f-body);font-weight:700;color:var(--dark);font-size:clamp(1.6rem,3vw,2.2rem);line-height:1.1}
+.stat span{font-size:12.5px;text-transform:uppercase;letter-spacing:1.1px;color:var(--ink);font-weight:600}
+
+/* ---------- projects | property cards ---------- */
+.projects{padding:4.5rem 0;background:var(--sec)}
+.projects .section-head{margin-bottom:2.6rem}
+.proj-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.pcard{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 8px 22px rgba(0,0,0,.07);transition:.3s;display:flex;flex-direction:column;border:1px solid #ece9e4}
+.pcard:hover{transform:translateY(-7px);box-shadow:0 18px 36px rgba(0,0,0,.13)}
+.pcard .th{position:relative;aspect-ratio:4/3;overflow:hidden;background:#e7e7e7}
+.pcard .th img{width:100%;height:100%;object-fit:cover;transition:.55s}
+.pcard:hover .th img{transform:scale(1.07)}
+.pcard .tag{position:absolute;top:.7rem;left:.7rem;background:rgba(255,255,255,.95);color:var(--brand-d);font-size:9.5px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;padding:.32rem .65rem;border-radius:99px;box-shadow:0 3px 10px rgba(0,0,0,.18)}
+.pcard .tag.up{background:#4b5563;color:#fff}
+.pcard .tag.nl{background:#1c8f4c;color:#fff}
+.pcard .bd{padding:1rem 1.1rem 1.1rem;display:flex;flex-direction:column;gap:.55rem;flex:1;text-align:left}
+.pcard h3{font-family:var(--f-head);font-weight:500;font-size:1.28rem;color:var(--brand);line-height:1.2}
+.pcard .loc{display:flex;align-items:center;gap:.35rem;font-size:.8rem;color:var(--ink)}
+.pcard .loc svg{width:13px;height:13px;color:var(--brand);flex:0 0 13px}
+.pcard .specs{display:grid;grid-template-columns:repeat(3,1fr);gap:.3rem;border-top:1px dashed #ddd9d3;border-bottom:1px dashed #ddd9d3;padding:.55rem 0;margin-top:.1rem}
+.pcard .specs span{font-size:9.5px;text-transform:uppercase;letter-spacing:.5px;color:var(--ink);line-height:1.4}
+.pcard .specs b{display:block;color:var(--dark);font-weight:700;text-transform:none;font-size:.78rem;letter-spacing:0}
+.pcard .foot{display:flex;align-items:center;justify-content:space-between;gap:.4rem;margin-top:.2rem}
+.pcard .rate{font-family:var(--f-head);font-size:1.02rem;color:var(--dark);font-weight:600;line-height:1.15}
+.pcard .rate small{display:block;font-family:var(--f-body);font-size:9px;color:var(--ink);text-transform:uppercase;letter-spacing:.7px}
+.pcard .cta{background:var(--brand);color:#fff;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;padding:.55rem .95rem;border-radius:999px;transition:.25s;white-space:nowrap}
+.pcard .cta:hover{background:var(--brand-d)}
+
+/* ---------- footer ---------- */
+footer{background:var(--foot)}
+.fflex{display:grid;grid-template-columns:1fr 1fr 1fr 1fr 1fr;gap:2.4rem;padding:3.6rem 0 2.4rem}
+.fflex h3{font-family:var(--f-head);font-weight:500;font-size:1.5rem;color:var(--brand);margin-bottom:1rem}
+.fflex p{font-size:.9rem}
+.fflex ul li{margin-bottom:.5rem;font-size:.9rem}
+.fflex ul a:hover{color:var(--brand-d)}
+.fflex .abi img{height:46px;width:auto;margin-bottom:1rem}
+.fflex .con li{display:flex;gap:.55rem;margin-bottom:.7rem;font-size:.9rem}
+.fflex .con .ico{color:var(--brand);font-weight:700}
+.fflex .con a:hover{color:var(--brand-d)}
+.social{display:flex;gap:.6rem;margin-top:1rem}
+.social a{width:34px;height:34px;border-radius:6px;display:grid;place-items:center;color:var(--ink);background:#fff;font-size:.9rem;border:1px solid #d4d4d4;transition:.25s}
+.social a:hover{color:var(--brand);border-color:var(--brand)}
+.social svg{width:16px;height:16px}
+.fflex .btn{display:inline-block;margin-top:1rem;background:var(--brand);color:#fff;font-size:12.5px;font-weight:600;text-transform:uppercase;letter-spacing:.8px;padding:.75rem 1.6rem;border-radius:999px;transition:.25s}
+.fflex .btn:hover{background:var(--brand-d)}
+.fbottom{display:flex;align-items:center;gap:.8rem;flex-wrap:wrap;padding:1.1rem 0;border-top:1px solid #cecece;font-size:.85rem}
+.fbottom a{font-weight:600;color:var(--brand-d);display:inline-flex;align-items:center;gap:.8rem}
+.fbottom a+a::before{content:"";width:1px;height:14px;background:var(--brand)}
+.fcopy{padding:1rem 0;font-size:14px;font-weight:500;color:var(--ink);border-top:1px solid #cecece;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+.fcopy b{font-weight:800}
+/* ---------- responsive ---------- */
+@media (max-width:1020px){
+  .stats{grid-template-columns:repeat(3,1fr)}
+  .proj-grid{grid-template-columns:repeat(2,1fr);gap:16px}
+  .fflex{grid-template-columns:1fr 1fr;gap:2rem}
+}
+@media (max-width:1040px){
+  .h-social{display:none}
+}
+@media (max-width:767px){
+  .site-header{top:0}
+  .header-inner{height:60px;border-radius:0 0 30px 30px;padding:0 14px}
+  .brand img{height:46px}
+  .h-social{display:none}
+  .nav-main{display:none}
+  .nav-burger{display:block}
+  .hero{min-height:50svh}
+  .hero .arrows button{display:none}
+  .hero .dots{bottom:.9rem}
+  .curve{margin-top:-16px}
+  .curve svg{height:26px}
+  .welcome{padding:1.4rem 0 3rem}
+  .stats{grid-template-columns:repeat(2,1fr);gap:.6rem}
+  .stat{padding:1rem .2rem}
+  .proj-grid{grid-template-columns:repeat(2,1fr);gap:12px}
+  .fflex{grid-template-columns:1fr}
+  .fcopy{flex-direction:column;gap:.4rem}
+}
+</style>
+<link rel="stylesheet" href="assets/css/ux.css?v=17">
+  <script type="application/ld+json">
+{
+    "@context":  "https://schema.org",
+    "@graph":  [
+                   {
+                       "@id":  "https://smartcitydevelopers.net/#business",
+                       "url":  "https://smartcitydevelopers.net/index.html",
+                       "address":  {
+                                       "addressLocality":  "Shivamogga",
+                                       "addressRegion":  "Karnataka",
+                                       "streetAddress":  "1st floor, BK Nayak Arcade, Vandana Bakery \u0026 Cycle Loka upstairs, Savalanga main Road",
+                                       "postalCode":  "577201",
+                                       "addressCountry":  "IN",
+                                       "@type":  "PostalAddress"
+                                   },
+                       "@type":  [
+                                     "RealEstateAgent",
+                                     "LocalBusiness"
+                                 ],
+                       "name":  "SmartCity Infra Developers",
+                       "geo":  {
+                                   "longitude":  75.5681,
+                                   "@type":  "GeoCoordinates",
+                                   "latitude":  13.9299
+                               },
+                       "openingHoursSpecification":  {
+                                                         "opens":  "09:30",
+                                                         "closes":  "19:00",
+                                                         "@type":  "OpeningHoursSpecification",
+                                                         "dayOfWeek":  [
+                                                                           "Monday",
+                                                                           "Tuesday",
+                                                                           "Wednesday",
+                                                                           "Thursday",
+                                                                           "Friday",
+                                                                           "Saturday",
+                                                                           "Sunday"
+                                                                       ]
+                                                     },
+                       "description":  "SmartCity Infra Developers provides high-standard plotted layouts, plots and townships across Shivamogga and Karnataka. Clear titles, freehold land, ready to construct.",
+                       "telephone":  "+919620585890",
+                       "priceRange":  "Inquire",
+                       "areaServed":  [
+                                          "Kotegangur",
+                                          "Virupinakoppa",
+                                          "Sri RamPura",
+                                          "Nidige",
+                                          "Purle",
+                                          "Bommanakatte",
+                                          "Shivamogga",
+                                          "Davangere District"
+                                      ],
+                       "image":  "https://smartcitydevelopers.net/assets/img/logo.png",
+                       "email":  "info@smartcitydevelopers.net"
+                   },
+                   {
+                       "url":  "https://smartcitydevelopers.net/index.html",
+                       "name":  "SmartCity Infra Developers",
+                       "@id":  "https://smartcitydevelopers.net/#website",
+                       "@type":  "WebSite",
+                       "inLanguage":  "en-IN"
+                   },
+                   {
+                       "name":  "SmartCity Infra Developers - Plot Projects in Shivamogga",
+                       "@id":  "https://smartcitydevelopers.net/#projects",
+                       "itemListElement":  [
+                                               {
+                                                   "position":  1,
+                                                   "url":  "https://smartcitydevelopers.net/pushpa.html",
+                                                   "name":  "Pushpa Layout",
+                                                   "@type":  "ListItem"
+                                               },
+                                               {
+                                                   "position":  2,
+                                                   "url":  "https://smartcitydevelopers.net/manohar-layout.html",
+                                                   "name":  "Manohar Layout",
+                                                   "@type":  "ListItem"
+                                               },
+                                               {
+                                                   "position":  3,
+                                                   "url":  "https://smartcitydevelopers.net/maruthi-phase-1.html",
+                                                   "name":  "Maruthi Residency Ph 1",
+                                                   "@type":  "ListItem"
+                                               },
+                                               {
+                                                   "position":  4,
+                                                   "url":  "https://smartcitydevelopers.net/maruthi-phase-2.html",
+                                                   "name":  "Maruthi Residency Ph 2",
+                                                   "@type":  "ListItem"
+                                               },
+                                               {
+                                                   "position":  5,
+                                                   "url":  "https://smartcitydevelopers.net/sri-sai.html",
+                                                   "name":  "Sri Sai Residency",
+                                                   "@type":  "ListItem"
+                                               },
+                                               {
+                                                   "position":  6,
+                                                   "url":  "https://smartcitydevelopers.net/sharadeesh-layout.html",
+                                                   "name":  "Sharadeesh Layout",
+                                                   "@type":  "ListItem"
+                                               },
+                                               {
+                                                   "position":  7,
+                                                   "url":  "https://smartcitydevelopers.net/sri-saila-township.html",
+                                                   "name":  "ShriShaila Township",
+                                                   "@type":  "ListItem"
+                                               }
+                                           ],
+                       "itemListOrder":  "https://schema.org/ItemListOrderAscending",
+                       "@type":  "ItemList",
+                       "numberOfItems":  7
+                   },
+                   {
+                       "mainEntity":  [
+                                          {
+                                              "acceptedAnswer":  {
+                                                                     "text":  "We offer plotted sites in 30x40 (1200 sq ft), 30x50 (1500 sq ft) and 40x60 (2400 sq ft) across layouts like Pushpa Layout, Manohar Layout, Maruthi Residency, Sri Sai Residency, Sharadeesh Layout and ShriShaila Township.",
+                                                                     "@type":  "Answer"
+                                                                 },
+                                              "name":  "What plot sizes are available at SmartCity layouts?",
+                                              "@type":  "Question"
+                                          },
+                                          {
+                                              "acceptedAnswer":  {
+                                                                     "text":  "Yes. Every SmartCity plot is freehold with a crystal-clear title, ready for registration. Our documentation is verified and transparent before any purchase.",
+                                                                     "@type":  "Answer"
+                                                                 },
+                                              "name":  "Are the plots freehold with clear title?",
+                                              "@type":  "Question"
+                                          },
+                                          {
+                                              "acceptedAnswer":  {
+                                                                     "text":  "Absolutely. We offer flexible instalment options and full support for bank loan assistance on all ready-to-construct layouts.",
+                                                                     "@type":  "Answer"
+                                                                 },
+                                              "name":  "Can I buy a plot on instalments or with a bank loan?",
+                                              "@type":  "Question"
+                                          },
+                                          {
+                                              "acceptedAnswer":  {
+                                                                     "text":  "Layouts include wide roads, parks and greenery, street lights, water and electricity connections, new gated colony features and are fully ready to construct.",
+                                                                     "@type":  "Answer"
+                                                                 },
+                                              "name":  "What amenities are provided in each layout?",
+                                              "@type":  "Question"
+                                          },
+                                          {
+                                              "acceptedAnswer":  {
+                                                                     "text":  "We are at 1st floor, BK Nayak Arcade, Vandana Bakery \u0026 Cycle Loka upstairs, Savalanga main Road, Shivamogga, Karnataka 577201. Call +91 9620 585890 to book a site visit.",
+                                                                     "@type":  "Answer"
+                                                                 },
+                                              "name":  "Where is the SmartCity office located?",
+                                              "@type":  "Question"
+                                          },
+                                          {
+                                              "acceptedAnswer":  {
+                                                                     "text":  "Use the Book Online form on this website or call +91 9620 585890. Site visits are free and our sales team confirms appointments within 24 hours.",
+                                                                     "@type":  "Answer"
+                                                                 },
+                                              "name":  "How do I book a plot or schedule a site visit?",
+                                              "@type":  "Question"
+                                          }
+                                      ],
+                       "@id":  "https://smartcitydevelopers.net/#faq",
+                       "@type":  "FAQPage"
+                   }
+               ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <a class="brand" href="index.html"><img src="assets/img/logo.png" alt="SmartCity Infra Developers logo"></a>
+    <div class="h-social" aria-label="Social media">
+      <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12z"/></svg></a>
+      <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg></a>
+      <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg></a>
+      <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.19a3.02 3.02 0 0 0-2.12-2.14C19.51 3.55 12 3.55 12 3.55s-7.51 0-9.38.5A3.02 3.02 0 0 0 .5 6.19C0 8.07 0 12 0 12s0 3.93.5 5.81a3.02 3.02 0 0 0 2.12 2.14c1.87.5 9.38.5 9.38.5s7.51 0 9.38-.5a3.02 3.02 0 0 0 2.12-2.14C24 15.93 24 12 24 12s0-3.93-.5-5.81zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg></a>
+    </div>
+    <nav class="nav-main" aria-label="Primary">
+      <a href="index.html" class="on">Home</a>
+      <a href="about.html">About</a>
+      <a href="#projects">Projects</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="book-online.html">Book Online</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="nav-burger" id="burger" aria-label="Menu"><i></i></button>
+  </div>
+</header>
+
+<div class="m-menu" id="mMenu">
+  <button class="close" id="mClose" aria-label="Close">&#215;</button>
+  <a href="index.html" class="on">Home</a>
+  <a href="about.html">About</a>
+  <a href="#projects">Projects</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="book-online.html">Book Online</a>
+  <a href="partner-with-us.html">Partner With Us</a>
+  <a href="contact.html">Contact</a>
+  <div class="m-foot">
+    <a href="tel:+919620585890">+91 9620 585890</a><br>
+    <a href="mailto:info@smartcitydevelopers.net">info@smartcitydevelopers.net</a>
+  </div>
+</div>
+
+<section class="hero" id="hero">
+  <span class="hero-badge"><span class="dot"></span> Premium Plots &amp; Townships &middot; Shivamogga</span>
+  <div class="slide on">
+    <img src="assets/img/hero/kailash-gyawali-A8A6sFI8344-unsplash-scaled.jpg" alt="Greenfield plotted layout">
+    <div class="quote">
+      <span class="qm">Where space and time are truly yours.</span>
+      <span class="ln"></span>
+      <span class="by">Premium Plots &middot; Shivamogga</span>
+    </div>
+  </div>
+  <div class="slide">
+    <img src="assets/img/hero/kent-tupas-2jfZ2Vj06sk-unsplash-scaled.jpg" alt="Gated township with parks">
+    <div class="quote">
+      <span class="qm">We build hopes, beauty and comfort.</span>
+      <span class="ln"></span>
+      <span class="by">SmartCity Infra Developers</span>
+    </div>
+  </div>
+  <div class="slide">
+    <img src="assets/img/hero/michael-lee-YhGQiKeSBLQ-unsplash-scaled.jpg" alt="Wide roads among greenery">
+    <div class="quote">
+      <span class="qm">Your dream home begins with a plot you can trust.</span>
+      <span class="ln"></span>
+      <span class="by">Clear Title &middot; Freehold &middot; Ready To Construct</span>
+    </div>
+  </div>
+  <div class="dim"></div>
+  <div class="glow" aria-hidden="true"></div>
+  <canvas class="fx" id="fx" aria-hidden="true"></canvas>
+  <div class="dots" id="dots" role="tablist" aria-label="Slides"></div>
+  <div class="arrows">
+    <button type="button" id="prev" aria-label="Previous">&#10094;</button>
+    <button type="button" id="next" aria-label="Next">&#10095;</button>
+  </div>
+  <a class="hero-scroll" href="#welcome" aria-label="Scroll to content"><span class="track"></span>Scroll</a>
+</section>
+
+<section class="welcome" id="welcome">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Since 2013 &middot; Trusted Across Karnataka</span>
+      <h1>Welcome Home to Excellence</h1>
+      <p class="lead">SmartCity Infra Developers delivers high-standard plotted layouts and full townships across Shivamogga, Karnataka. Genuine freehold land, clear titles, wide roads, parks, water and power — we build hopes, beauty and comfort.</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V5a1 1 0 0 1 1-1h9a1 1 0 0 1 1 1v16M4 21h16M8 21v-4h3v4M8 8h1M8 12h1M11 9h1"/></svg></div><b class="cnum" data-count="13">0</b><span>Years Of Legacy</span></div>
+      <div class="stat"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11.5 12 4l9 7.5M5.5 10v9a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-9M9.5 20v-5h5v5"/></svg></div><b class="cnum" data-count="7">0</b><span>Projects Delivered</span></div>
+      <div class="stat"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.2"/><path d="M2.5 20c.8-3.4 3.4-5 6.5-5s5.7 1.6 6.5 5M17 8.5a2.7 2.7 0 1 0-1.6 2.5"/></svg></div><b class="cnum" data-count="1000">0</b><span>Happy Families</span></div>
+      <div class="stat"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.1 7-11a7 7 0 1 0-14 0c0 4.9 7 11 7 11z"/><circle cx="12" cy="9.5" r="2.6"/></svg></div><b class="cnum" data-count="500">0</b><span>Plots Sold</span></div>
+      <div class="stat"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5 20 5.5v6c0 4.6-3.2 8.2-8 10-4.8-1.8-8-5.4-8-10v-6z"/><path d="m8.8 11.8 2.2 2.2 4.2-4.4"/></svg></div><b class="cnum" data-count="100" data-suffix="%">0</b><span>Clear Title</span></div>
+      <div class="stat"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14v-2a8 8 0 0 1 16 0v2"/><rect x="3" y="14" width="4" height="6" rx="2"/><rect x="17" y="14" width="4" height="6" rx="2"/></svg></div><b>24/7</b><span>Sales Support</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="ux-marquee" aria-hidden="true">
+  <div class="row">
+    <span><i></i> Clear Title <i></i> Freehold Land <i></i> Ready To Construct <i></i> Wide Roads <i></i> Parks &amp; Greenery <i></i> Water &amp; Power <i></i> New Gated Colony <i></i> Bank Loan Assistance <i></i></span>
+    <span><i></i> Clear Title <i></i> Freehold Land <i></i> Ready To Construct <i></i> Wide Roads <i></i> Parks &amp; Greenery <i></i> Water &amp; Power <i></i> New Gated Colony <i></i> Bank Loan Assistance <i></i></span>
+  </div>
+</section>
+
+<section class="projects" id="projects">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Our Portfolio</span>
+      <h2>Our Projects</h2>
+      <p>Premium plotted layouts across Shivamogga — ready to construct, ready to own.</p>
+    </div>
+    <div class="proj-grid">
+      <a class="pcard" href="pushpa.html"><div class="th"><img src="assets/img/smartcitydeveloper1.png" alt="Pushpa Layout"><span class="tag">Ready To Construct</span></div><div class="bd"><h3>Pushpa Layout</h3><p class="loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.1 7-11a7 7 0 1 0-14 0c0 4.9 7 11 7 11z"/><circle cx="12" cy="9.5" r="2.6"/></svg>Kotegangur, Shivamogga</p><div class="specs"><span><b>30&times;40</b>Sites From</span><span><b>Freehold</b>Property Type</span><span><b>Clear Title</b>Documentation</span></div><div class="foot"><span class="rate"><small>Price</small>&#8377; On Request</span><span class="cta">Enquire</span></div></div></a>
+      <a class="pcard" href="manohar-layout.html"><div class="th"><img src="assets/img/smartcitydeveloper2.png" alt="Manohar Layout"><span class="tag">Ready To Construct</span></div><div class="bd"><h3>Manohar Layout</h3><p class="loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.1 7-11a7 7 0 1 0-14 0c0 4.9 7 11 7 11z"/><circle cx="12" cy="9.5" r="2.6"/></svg>Kotegangur, Shivamogga</p><div class="specs"><span><b>30&times;40</b>Sites From</span><span><b>Freehold</b>Property Type</span><span><b>Clear Title</b>Documentation</span></div><div class="foot"><span class="rate"><small>Price</small>&#8377; On Request</span><span class="cta">Enquire</span></div></div></a>
+      <a class="pcard" href="maruthi-phase-1.html"><div class="th"><img src="assets/img/smartcitydeveloper3.png" alt="Maruthi Residency Phase 1"><span class="tag">Ready To Construct</span></div><div class="bd"><h3>Maruthi Residency Ph 1</h3><p class="loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.1 7-11a7 7 0 1 0-14 0c0 4.9 7 11 7 11z"/><circle cx="12" cy="9.5" r="2.6"/></svg>Virupinakoppa</p><div class="specs"><span><b>30&times;50</b>Sites From</span><span><b>Freehold</b>Property Type</span><span><b>Clear Title</b>Documentation</span></div><div class="foot"><span class="rate"><small>Price</small>&#8377; On Request</span><span class="cta">Enquire</span></div></div></a>
+      <a class="pcard" href="maruthi-phase-2.html"><div class="th"><img src="assets/img/smartcitydeveloper4.png" alt="Maruthi Residency Phase 2"><span class="tag">Ready To Construct</span></div><div class="bd"><h3>Maruthi Residency Ph 2</h3><p class="loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.1 7-11a7 7 0 1 0-14 0c0 4.9 7 11 7 11z"/><circle cx="12" cy="9.5" r="2.6"/></svg>Sri RamPura</p><div class="specs"><span><b>30&times;50</b>Sites From</span><span><b>Freehold</b>Property Type</span><span><b>Clear Title</b>Documentation</span></div><div class="foot"><span class="rate"><small>Price</small>&#8377; On Request</span><span class="cta">Enquire</span></div></div></a>
+      <a class="pcard" href="sri-sai.html"><div class="th"><img src="assets/img/smartcitydeveloper5.png" alt="Sri Sai Residency"><span class="tag">Ready To Construct</span></div><div class="bd"><h3>Sri Sai Residency</h3><p class="loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.1 7-11a7 7 0 1 0-14 0c0 4.9 7 11 7 11z"/><circle cx="12" cy="9.5" r="2.6"/></svg>Nidige</p><div class="specs"><span><b>30&times;40</b>Sites From</span><span><b>Freehold</b>Property Type</span><span><b>Clear Title</b>Documentation</span></div><div class="foot"><span class="rate"><small>Price</small>&#8377; On Request</span><span class="cta">Enquire</span></div></div></a>
+      <a class="pcard" href="sharadeesh-layout.html"><div class="th"><img src="assets/img/smartcitydeveloper6.png" alt="Sharadeesh Layout"><span class="tag">Ready To Construct</span></div><div class="bd"><h3>Sharadeesh Layout</h3><p class="loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.1 7-11a7 7 0 1 0-14 0c0 4.9 7 11 7 11z"/><circle cx="12" cy="9.5" r="2.6"/></svg>Bommanakatte</p><div class="specs"><span><b>30&times;40</b>Sites From</span><span><b>Freehold</b>Property Type</span><span><b>Clear Title</b>Documentation</span></div><div class="foot"><span class="rate"><small>Price</small>&#8377; On Request</span><span class="cta">Enquire</span></div></div></a>
+      <a class="pcard" href="sri-saila-township.html"><div class="th"><img src="assets/img/smartcitydeveloper7.png" alt="ShriShaila Township"><span class="tag up">Upcoming</span></div><div class="bd"><h3>ShriShaila Township</h3><p class="loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.1 7-11a7 7 0 1 0-14 0c0 4.9 7 11 7 11z"/><circle cx="12" cy="9.5" r="2.6"/></svg>Purle</p><div class="specs"><span><b>40&times;60</b>Sites From</span><span><b>Township</b>Property Type</span><span><b>RERA Soon</b>Documentation</span></div><div class="foot"><span class="rate"><small>Register</small>&#8377; Early Offer</span><span class="cta">Enquire</span></div></div></a>
+      <a class="pcard" href="contact.html"><div class="th"><img src="assets/img/hero/michael-lee-YhGQiKeSBLQ-unsplash-scaled.jpg" alt="Signature Township"><span class="tag nl">New Launch</span></div><div class="bd"><h3>Signature Township</h3><p class="loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.1 7-11a7 7 0 1 0-14 0c0 4.9 7 11 7 11z"/><circle cx="12" cy="9.5" r="2.6"/></svg>Virupinakoppa</p><div class="specs"><span><b>30&times;50</b>Sites From</span><span><b>Freehold</b>Property Type</span><span><b>Clear Title</b>Documentation</span></div><div class="foot"><span class="rate"><small>New Launch</small>&#8377; Pre-launch Offer</span><span class="cta">Enquire</span></div></div></a>
+	</div>
+  </div>
+</section>
+
+<section class="ux-video">
+  <div class="wrap" style="max-width:1000px">
+    <div class="section-head">
+      <span class="eyebrow">Watch Us In Action</span>
+      <h2>Take A Walk Through Our Layouts</h2>
+      <p>See the plots, the roads and the greenery for yourself — the SmartCity way of building communities.</p>
+    </div>
+    <div class="ux-vwrap">
+      <button class="ux-vplay" type="button" id="uxVplay" aria-label="Play township video">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.3v13.4a.9.9 0 0 0 1.38.77l11-6.7a.9.9 0 0 0 0-1.54l-11-6.7A.9.9 0 0 0 8 5.3z" transform="translate(1 0)"/></svg>
+      </button>
+      <div class="ux-vbg"><img src="assets/img/smartcitydeveloper8.png" alt="Aerial view of a SmartCity plotted layout" loading="lazy"></div>
+      <span class="ux-vtag">Official Layout Video</span>
+    </div>
+  </div>
+</section>
+
+<section class="ux-features">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Why Choose Us</span>
+      <h2>Land You Can Trust,<br>Communities You Can Love</h2>
+      <p>Every SmartCity layout is built on transparent documentation and complete amenities — so your investment is safe and your future is comfortable.</p>
+    </div>
+    <div class="ux-fgrid">
+      <div class="ux-feat">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5 20 5.5v6c0 4.6-3.2 8.2-8 10-4.8-1.8-8-5.4-8-10v-6z"/><path d="m8.8 11.8 2.2 2.2 4.2-4.4"/></svg></div>
+        <b>Clear Title &amp; Freehold</b>
+        <p>Registrable, freehold land with crystal-clear documentation and complete legal support on every plot.</p>
+      </div>
+      <div class="ux-feat">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11.5 12 4l9 7.5M5.5 10v9a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-9M9.5 20v-5h5v5"/></svg></div>
+        <b>Complete Amenities</b>
+        <p>Wide roads, parks, street lights, water and power — fully developed and ready to construct on.</p>
+      </div>
+      <div class="ux-feat">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3M3 12h3M12 21v-3M21 12h-3"/><circle cx="12" cy="12" r="4.6"/><path d="m12 10 1.6 1.6L12 13.2 10.4 15"/></svg></div>
+        <b>Ready To Construct</b>
+        <p>All layouts come ready for construction — roads, drains and infrastructure done before you begin.</p>
+      </div>
+      <div class="ux-feat">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 3 7v10l9 5 9-5V7z"/><path d="m12 12 9-5M12 22V12M3 7l9 5"/></svg></div>
+        <b>Easy Payment Plans</b>
+        <p>Flexible instalment options and bank loan assistance make owning your plot simpler than ever.</p>
+      </div>
+      <div class="ux-feat">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+        <b>Genuine Team</b>
+        <p>13+ years in Shivamogga, 1000+ happy families and a team that answers — before and after the sale.</p>
+      </div>
+      <div class="ux-feat">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.1 7-11a7 7 0 1 0-14 0c0 4.9 7 11 7 11z"/><circle cx="12" cy="9.5" r="2.6"/></svg></div>
+        <b>Great Locations</b>
+        <p>Prime, well-connected sites in Kotegangur, Virupinakoppa, Sri RamPura, Nidige, Purle and more.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ux-areas">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Where We Build</span>
+      <h2>Growing Across Shivamogga &amp; Beyond</h2>
+      <p>From greenfield layouts to full townships — find your plot in a neighbourhood that keeps value for decades.</p>
+    </div>
+    <div class="chips">
+      <span>Kotegangur</span><span>Virupinakoppa</span><span>Sri RamPura</span><span>Nidige</span><span>Purle</span><span>Bommanakatte</span><span>Davangere District</span>
+    </div>
+  </div>
+</section>
+
+<section class="ux-testi">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Testimonials</span>
+      <h2>What Our Families Say</h2>
+      <p>Real stories from customers who built their future with SmartCity.</p>
+    </div>
+    <div class="ux-tgrid">
+      <div class="ux-quote">
+        <div class="mark">&ldquo;</div>
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>Everything was clear from day one — the title, the registration, the measurements. I never once felt unsure about my purchase.</p>
+        <div class="who"><span class="av">NK</span><div><b>Nagesh Kumar</b><span>Pushpa Layout &middot; Kotegangur</span></div></div>
+      </div>
+      <div class="ux-quote">
+        <div class="mark">&ldquo;</div>
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>Their team showed us the site, explained the instalment plan and handled the bank loan paperwork. Genuinely professional.</p>
+        <div class="who"><span class="av">RM</span><div><b>Rekha M.</b><span>Maruthi Residency Ph 1</span></div></div>
+      </div>
+      <div class="ux-quote">
+        <div class="mark">&ldquo;</div>
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>We compared many developers and SmartCity simply had better roads, better layout and honest pricing. Worth every rupee.</p>
+        <div class="who"><span class="av">SP</span><div><b>Sharath P.</b><span>Sharadeesh Layout</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ux-faq">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">FAQs</span>
+      <h2>Frequently Asked Questions</h2>
+      <p>Quick answers about plots, titles, loans and bookings.</p>
+    </div>
+    <div class="ux-fgrid">
+      <details class="ux-fq">
+        <summary>What plot sizes are available at SmartCity layouts?</summary>
+        <p>We offer plotted sites in 30x40 (1200 sq ft), 30x50 (1500 sq ft) and 40x60 (2400 sq ft) across layouts like Pushpa Layout, Manohar Layout, Maruthi Residency, Sri Sai Residency, Sharadeesh Layout and ShriShaila Township.</p>
+      </details>
+      <details class="ux-fq">
+        <summary>Are the plots freehold with clear title?</summary>
+        <p>Yes. Every SmartCity plot is freehold with a crystal-clear title, ready for registration. Our documentation is verified and transparent before any purchase.</p>
+      </details>
+      <details class="ux-fq">
+        <summary>Can I buy a plot on instalments or with a bank loan?</summary>
+        <p>Absolutely. We offer flexible instalment options and full support for bank loan assistance on all ready-to-construct layouts.</p>
+      </details>
+      <details class="ux-fq">
+        <summary>What amenities are provided in each layout?</summary>
+        <p>Layouts include wide roads, parks and greenery, street lights, water and electricity connections, and are fully ready to construct.</p>
+      </details>
+      <details class="ux-fq">
+        <summary>Where is the SmartCity office located?</summary>
+        <p>We are at 1st floor, BK Nayak Arcade, Vandana Bakery &amp; Cycle Loka upstairs, Savalanga main Road, Shivamogga, Karnataka 577201. Call +91 9620 585890 to book a site visit.</p>
+      </details>
+      <details class="ux-fq">
+        <summary>How do I book a plot or schedule a site visit?</summary>
+        <p>Use the Book Online form on this website or call +91 9620 585890. Site visits are free and our sales team confirms appointments within 24 hours.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="ban">
+  <div class="wrap">
+    <img src="assets/img/hero/banner1-2.jpg" alt="SmartCity planned community banner">
+  </div>
+</section>
+
+<section class="ux-cta">
+  <div class="wrap">
+    <div class="panel">
+      <div class="txt">
+        <span class="eyebrow">Limited Sites Available</span>
+        <h3>Your dream plot is waiting.<br>Come see it for yourself.</h3>
+        <p>Book a free site visit today — we'll show you the roads, the parks and the exact plot that fits your budget, with zero obligation.</p>
+      </div>
+      <div class="acts">
+        <a class="btn" href="book-online.html">Book A Site Visit</a>
+        <a class="btn ghost" href="tel:+919620585890">&#9990; +91 9620 585890</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="wrap">
+    <div class="fflex">
+      <div class="abi">
+        <img src="assets/img/logo.png" alt="SmartCity Infra Developers">
+        <p>SmartCity Infra Developers provides high-standard plotted layouts and full townships. Building hopes, beauty and comfort across Karnataka.</p>
+        <a class="btn" href="contact.html">Book A Site Visit</a>
+      </div>
+      <div>
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="book-online.html">Book Online</a></li>
+          <li><a href="partner-with-us.html">Partner With Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Projects</h3>
+        <ul>
+          <li><a href="pushpa.html">Pushpa Layout</a></li>
+          <li><a href="manohar-layout.html">Manohar Layout</a></li>
+          <li><a href="maruthi-phase-1.html">Maruthi Residency Ph 1</a></li>
+          <li><a href="maruthi-phase-2.html">Maruthi Residency Ph 2</a></li>
+          <li><a href="sri-sai.html">Sri Sai Residency</a></li>
+          <li><a href="sharadeesh-layout.html">Sharadeesh Layout</a></li>
+          <li><a href="sri-saila-township.html">ShriShaila Township</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Find Your Plot</h3>
+        <ul class="con">
+          <li><span class="ico">&#9873;</span><span>1st floor, BK Nayak Arcade,<br>Vandana Bakery &amp; Cycle Loka upstairs,<br>Savalanga main Road,<br>Shivamogga, Karnataka 577201</span></li>
+          <li><span class="ico">&#9742;</span><a href="tel:+919620585890">+91 9620 585890</a></li>
+          <li><span class="ico">&#9993;</span><a href="mailto:info@smartcitydevelopers.net">info@smartcitydevelopers.net</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Connect</h3>
+        <div class="social">
+          <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg></a>
+          <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12z"/></svg></a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg></a>
+          <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.19a3.02 3.02 0 0 0-2.12-2.14C19.51 3.55 12 3.55 12 3.55s-7.51 0-9.38.5A3.02 3.02 0 0 0 .5 6.19C0 8.07 0 12 0 12s0 3.93.5 5.81a3.02 3.02 0 0 0 2.12 2.14c1.87.5 9.38.5 9.38.5s7.51 0 9.38-.5a3.02 3.02 0 0 0 2.12-2.14C24 15.93 24 12 24 12s0-3.93-.5-5.81zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg></a>
+          <a href="https://wa.me/919620585890" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.5 0 1.47 1.07 2.9 1.22 3.1.15.2 2.1 3.2 5.1 4.49.71.3 1.27.49 1.7.63.72.23 1.37.2 1.88.12.58-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35zM12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 1 1 8.38 4.63zm8.42-18.3A11.82 11.82 0 0 0 12.04 0C5.5 0 .16 5.34.16 11.92c0 2.1.55 4.15 1.6 5.96L.05 24l6.27-1.64a11.9 11.9 0 0 0 5.72 1.46h.01c6.54 0 11.87-5.34 11.87-11.92 0-3.18-1.24-6.17-3.4-8.41z"/></svg></a>
+        </div>
+        <p style="margin-top:1rem;font-size:.9rem">Trusted since 2013. Freehold, registrable plots.</p>
+      </div>
+    </div>
+    <div class="fbottom">
+      <a href="tel:+919620585890">Book A Site Visit</a>
+    </div>
+    <div class="fcopy">
+      <span>&copy; 2026 SmartCity Infra Developers. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var slides = document.querySelectorAll(".hero .slide");
+  var dotsWrap = document.getElementById("dots");
+  var idx = 0, timer = null;
+
+  var heroBox = document.getElementById("hero");
+  var fx = document.getElementById("fx"), fxCtx = fx ? fx.getContext("2d") : null;
+  var fxBusy = false, fxRaf = null, skipFX = false;
+  try { skipFX = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches; } catch (e) {}
+  function cancelFX() {
+    fxBusy = false;
+    if (fxRaf) { cancelAnimationFrame(fxRaf); fxRaf = null; }
+    if (fx) fx.style.display = "none";
+  }
+  function easeO(t) { return 1 - Math.pow(1 - t, 3); }
+  function easeBack(t) { var c1 = 1.70158, c3 = c1 + 1, x = t - 1; return 1 + c3 * Math.pow(x, 3) + c1 * Math.pow(x, 2); }
+  function snapTo(slide) {
+    var img = slide.querySelector("img");
+    if (!img || !img.naturalWidth) return null;
+    var cw = heroBox.clientWidth, ch = heroBox.clientHeight, nw = img.naturalWidth, nh = img.naturalHeight;
+    var c = document.createElement("canvas");
+    c.width = cw; c.height = ch;
+    var s = Math.max(cw / nw, ch / nh);
+    c.getContext("2d", { willReadFrequently: true }).drawImage(img, (cw - nw * s) / 2, (ch - nh * s) / 2, nw * s, nh * s);
+    return c;
+  }
+  function readPts(cv, sp) {
+    var g = cv.getContext("2d"), d = g.getImageData(0, 0, cv.width, cv.height).data, pts = [], i;
+    for (var y = 0; y < cv.height; y += sp) for (var x = 0; x < cv.width; x += sp) {
+      i = (y * cv.width + x) * 4;
+      if (d[i + 3] > 80) pts.push({ gx: x, gy: y, sx: Math.random() * 2 - 1, sy: Math.random() * 2 - 1, c: "rgba(" + d[i] + "," + d[i + 1] + "," + d[i + 2] + ",.96)" });
+    }
+    return pts;
+  }
+
+  var lastFX = null;
+
+  function paintPts(pts, sp, k, mode) {
+    var blow = sp * 2.3, r = sp * 0.5, p;
+    for (var i = 0; i < pts.length; i++) {
+      p = pts[i];
+      if (mode === 0) { fxCtx.beginPath(); fxCtx.arc(p.gx + p.sx * blow * k, p.gy + p.sy * blow * k + sp * 0.7 * k, r, 0, 6.2832); }
+      else { fxCtx.beginPath(); fxCtx.arc(p.gx + p.sx * blow * (1 - k), p.gy + p.sy * blow * (1 - k), r, 0, 6.2832); }
+      fxCtx.fillStyle = p.c; fxCtx.fill();
+    }
+  }
+  function fadeOut(t0, t1, t2, t3, cw, ch, fin, now) {
+    var f = Math.min((now - t1 - t2) / t3, 1);
+    fxCtx.globalAlpha = 1 - f;
+    fxCtx.fillStyle = "#0d0d0d";
+    fxCtx.fillRect(0, 0, cw, ch);
+    fxCtx.globalAlpha = 1;
+    if (f < 1) { fxRaf = requestAnimationFrame(function (n) { return fadeOut(t0, t1, t2, t3, cw, ch, fin, n); }); return; }
+    fin();
+  }
+
+  function fxParticles(A, B, cw, ch, sp, fin) {
+    var pA = readPts(A, sp), pB = B ? readPts(B, sp) : [];
+    var t0 = performance.now(), t1 = 900, t2 = 1500, t3 = 420;
+    function frame(now) {
+      var el = now - t0;
+      if (el < t1) { fxCtx.fillStyle = "#0d0d0d"; fxCtx.fillRect(0, 0, cw, ch); paintPts(pA, sp, easeO(el / t1), 0); fxRaf = requestAnimationFrame(frame); }
+      else if (el < t1 + t2) { fxCtx.fillStyle = "#0d0d0d"; fxCtx.fillRect(0, 0, cw, ch); paintPts(pB, sp, easeBack((el - t1) / t2), 1); fxRaf = requestAnimationFrame(frame); }
+      else { fadeOut(t0, t1, t2, t3, cw, ch, fin, now); }
+    }
+    fxRaf = requestAnimationFrame(frame);
+  }
+
+  function fxPixelGrid(A, B, cw, ch, sp, fin) {
+    var pA = readPts(A, sp), pB = B ? readPts(B, sp) : [];
+    var t0 = performance.now(), t1 = 1000, t2 = 1500, t3 = 400;
+    function sq(pts, k, conv) {
+      var blow = sp * 2.6, s = sp * 0.9, p, u, z, x, y;
+      for (var i = 0; i < pts.length; i++) {
+        p = pts[i]; u = conv ? easeBack(k) : easeO(k);
+        x = conv ? (p.gx + p.sx * blow * (1 - u)) : (p.gx + p.sx * blow * u);
+        y = conv ? (p.gy + p.sy * blow * (1 - u)) : (p.gy + p.sy * blow * u);
+        z = Math.max(2, s * (conv ? u : (1 - u)));
+        fxCtx.fillStyle = p.c; fxCtx.fillRect(x - z / 2, y - z / 2, z, z);
+      }
+    }
+    function frame(now) {
+      var el = now - t0;
+      if (el < t1) { fxCtx.fillStyle = "#0d0d0d"; fxCtx.fillRect(0, 0, cw, ch); sq(pA, el / t1, false); fxRaf = requestAnimationFrame(frame); }
+      else if (el < t1 + t2) { fxCtx.fillStyle = "#0d0d0d"; fxCtx.fillRect(0, 0, cw, ch); sq(pB, (el - t1) / t2, true); fxRaf = requestAnimationFrame(frame); }
+      else { fadeOut(t0, t1, t2, t3, cw, ch, fin, now); }
+    }
+    fxRaf = requestAnimationFrame(frame);
+  }
+
+  function fxStripes(A, B, cw, ch, sp, fin) {
+    var bands = 14, bh = ch / bands, t0 = performance.now(), t1 = 800, t2 = 1200, t3 = 360;
+    function draw(cv, k, inDir) {
+      var u = easeO(k), off = (inDir ? (1 - u) : u) * ch * 0.7, o, my, by, dir;
+      for (var i = 0; i <= bands; i++) {
+        dir = (i % 2 === 0) ? 1 : -1; o = off * dir; by = i * bh; my = by + o;
+        if (my + bh < 0 || my > ch) continue;
+        fxCtx.drawImage(cv, 0, by, cw, bh, 0, my, cw, bh);
+      }
+    }
+    function frame(now) {
+      var el = now - t0;
+      if (el < t1) { fxCtx.fillStyle = "#0d0d0d"; fxCtx.fillRect(0, 0, cw, ch); draw(A, el / t1, false); fxRaf = requestAnimationFrame(frame); }
+      else if (el < t1 + t2) { fxCtx.fillStyle = "#0d0d0d"; fxCtx.fillRect(0, 0, cw, ch); draw(B || A, (el - t1) / t2, true); fxRaf = requestAnimationFrame(frame); }
+      else { fadeOut(t0, t1, t2, t3, cw, ch, fin, now); }
+    }
+    fxRaf = requestAnimationFrame(frame);
+  }
+
+  function fxVertical(A, B, cw, ch, sp, fin) {
+    var cols = 18, cw2 = cw / cols, t0 = performance.now(), t1 = 800, t2 = 1200, t3 = 360;
+    function draw(cv, k, inDir) {
+      var u = easeO(k), off = (inDir ? (1 - u) : u) * cw2 * 4, o, mx, bx, dir;
+      for (var i = 0; i <= cols; i++) {
+        dir = (i % 2 === 0) ? 1 : -1; o = off * dir; bx = i * cw2; mx = bx + o;
+        if (mx + cw2 < 0 || mx > cw) continue;
+        fxCtx.drawImage(cv, bx, 0, cw2, ch, mx, 0, cw2, ch);
+      }
+    }
+    function frame(now) {
+      var el = now - t0;
+      if (el < t1) { fxCtx.fillStyle = "#0d0d0d"; fxCtx.fillRect(0, 0, cw, ch); draw(A, el / t1, false); fxRaf = requestAnimationFrame(frame); }
+      else if (el < t1 + t2) { fxCtx.fillStyle = "#0d0d0d"; fxCtx.fillRect(0, 0, cw, ch); draw(B || A, (el - t1) / t2, true); fxRaf = requestAnimationFrame(frame); }
+      else { fadeOut(t0, t1, t2, t3, cw, ch, fin, now); }
+    }
+    fxRaf = requestAnimationFrame(frame);
+  }
+
+  function fxLaser(A, B, cw, ch, sp, fin) {
+    var t0 = performance.now(), T = 1450;
+    function frame(now) {
+      var p = Math.min((now - t0) / T, 1), u = easeO(p), sy = u * ch;
+      fxCtx.drawImage(A, 0, 0, cw, ch);
+      if (B && sy > 0) {
+        fxCtx.save();
+        fxCtx.beginPath(); fxCtx.rect(0, 0, cw, sy); fxCtx.clip();
+        fxCtx.drawImage(B, 0, 0, cw, ch);
+        fxCtx.restore();
+      }
+      if (p < 1) {
+        var grad = fxCtx.createLinearGradient(0, sy - 26, 0, sy + 26);
+        grad.addColorStop(0, "rgba(255,255,255,0)");
+        grad.addColorStop(.5, "rgba(255,255,255,.9)");
+        grad.addColorStop(1, "rgba(255,255,255,0)");
+        fxCtx.fillStyle = grad; fxCtx.fillRect(0, sy - 26, cw, 52);
+        fxRaf = requestAnimationFrame(frame);
+      } else { fin(); }
+    }
+    fxRaf = requestAnimationFrame(frame);
+  }
+
+  function runFX(out, inn) {
+    if (skipFX || !fx || !fxCtx || fxBusy) return;
+    var cw = heroBox.clientWidth, ch = heroBox.clientHeight;
+    if (cw < 40 || ch < 40) return;
+    var A = snapTo(out);
+    if (!A) return;
+    var B = snapTo(inn);
+    fxBusy = true;
+    fx.width = cw; fx.height = ch;
+    fx.style.display = "block";
+    var sp = Math.max(6, Math.round(Math.sqrt((cw * ch) / 7600)));
+    var pool = [fxParticles, fxPixelGrid, fxStripes, fxVertical, fxLaser];
+    var picked = pool[Math.floor(Math.random() * pool.length)];
+    if (picked === lastFX) {
+      var alt = [];
+      pool.forEach(function (fn) { if (fn !== lastFX) alt.push(fn); });
+      picked = alt[Math.floor(Math.random() * alt.length)];
+    }
+    lastFX = picked;
+    picked(A, B, cw, ch, sp, function () { fxBusy = false; fx.style.display = "none"; });
+  }
+
+  if (dotsWrap) {
+    for (var i = 0; i < slides.length; i++) {
+      var d = document.createElement("span");
+      d.addEventListener("click", (function (n) { return function () { go(n, true); }; })(i));
+      dotsWrap.appendChild(d);
+    }
+  }
+  function paint() {
+    slides.forEach(function (s, i) { s.classList.toggle("on", i === idx); });
+    var ds = dotsWrap.querySelectorAll("span");
+    ds.forEach(function (d, i) { d.classList.toggle("on", i === idx); });
+  }
+  function go(n, reset) {
+    var out = slides[idx];
+    idx = (n + slides.length) % slides.length;
+    paint();
+    if (out && out !== slides[idx]) runFX(out, slides[idx]); else cancelFX();
+    if (reset) start();
+  }
+  function start() { if (timer) clearInterval(timer); timer = setInterval(function () { go(idx + 1); }, 9000); }
+  var prev = document.getElementById("prev"), next = document.getElementById("next");
+  if (prev) prev.addEventListener("click", function () { go(idx - 1, true); });
+  if (next) next.addEventListener("click", function () { go(idx + 1, true); });
+
+  var tx0 = 0, ty0 = 0;
+  if (heroBox) {
+    heroBox.addEventListener("touchstart", function (e) { tx0 = e.touches[0].clientX; ty0 = e.touches[0].clientY; }, { passive: true });
+    heroBox.addEventListener("touchend", function (e) {
+      var dx = e.changedTouches[0].clientX - tx0;
+      var dy = e.changedTouches[0].clientY - ty0;
+      if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy)) { go(dx < 0 ? idx + 1 : idx - 1, true); }
+    }, { passive: true });
+  }
+  paint(); start();
+
+  var header = document.getElementById("siteHeader");
+  window.addEventListener("scroll", function () {
+    header.classList.toggle("shrink", window.scrollY > 50);
+  }, { passive: true });
+
+  var burger = document.getElementById("burger"), menu = document.getElementById("mMenu");
+  function openMenu() { menu.classList.add("open"); document.body.style.overflow = "hidden"; }
+  function closeMenu() { menu.classList.remove("open"); document.body.style.overflow = ""; }
+  burger.addEventListener("click", openMenu);
+  document.getElementById("mClose").addEventListener("click", closeMenu);
+  menu.addEventListener("click", function (e) { if (e.target.tagName === "A") closeMenu(); });
+
+  var counters = document.querySelectorAll(".cnum");
+  if ("IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        io.unobserve(en.target);
+        anim(en.target);
+      });
+    }, { threshold: 0.4 });
+    counters.forEach(function (c) { io.observe(c); });
+  } else {
+    counters.forEach(anim);
+  }
+  function anim(el) {
+    var target = parseInt(el.getAttribute("data-count"), 10);
+    var suffix = el.getAttribute("data-suffix") || "";
+    var t0 = null;
+    function step(t) {
+      if (!t0) t0 = t;
+      var p = Math.min((t - t0) / 2000, 1);
+      var eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = Math.round(eased * target) + suffix;
+      if (p < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+
+  if ("serviceWorker" in navigator && (location.protocol === "https:" || location.hostname === "localhost" || location.hostname === "127.0.0.1")) {
+    window.addEventListener("load", function () { navigator.serviceWorker.register("sw.js").catch(function () {}); });
+  }
+})();
+</script>
+<script src="assets/js/ux.js?v=5" defer></script>
+<nav class="m-nav" aria-label="Mobile navigation">
+  <a href="index.html" class="on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5M5.5 10v9a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-9"/></svg><span>Home</span></a>
+  <a href="about.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11.5V16"/><circle cx="12" cy="8" r="1" fill="currentColor" stroke="none"/></svg><span>About</span></a>
+  <a href="index.html#projects"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21V5a1 1 0 0 1 1-1h9a1 1 0 0 1 1 1v16M4 21h16M8 21v-4h3v4"/><path d="M8 8h1M8 12h1M11 9h1"/></svg><span>Projects</span></a>
+  <a href="gallery.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="15" rx="2.5"/><circle cx="9" cy="10" r="2"/><path d="m4 17.5 4.5-4 3.5 3 4-4 4 3.5"/></svg><span>Gallery</span></a>
+  <a href="book-online.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="16" rx="2.5"/><path d="M8 2.8v3M16 2.8v3M3 9.5h18"/></svg><span>Book</span></a>
+  <a href="contact.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.5 3.5h2.4a1.5 1.5 0 0 1 1.5 1.3c.09.7.27 1.4.55 2.1a1.5 1.5 0 0 1-.34 1.58L9.5 10a12.5 12.5 0 0 0 4.5 4.5l1.5-1.1a1.5 1.5 0 0 1 1.58-.34c.7.28 1.4.46 2.1.55a1.5 1.5 0 0 1 1.3 1.5v2.4a1.5 1.5 0 0 1-1.63 1.5A17.5 17.5 0 0 1 4 5.13 1.5 1.5 0 0 1 6.5 3.5z"/></svg><span>Contact</span></a>
+</nav>
+</body>
+</html>

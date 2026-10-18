@@ -1,0 +1,50 @@
+/* ============================================
+   hero crossfade slider + airbnb cards
+   PURE CSS crossfade (no JS required)
+   ============================================ */
+
+/* ---- slide stack ---- */
+.hero-img.main{position:relative;border-radius:24px;overflow:hidden}
+.hero-img.main .slides{position:absolute;inset:0}
+.hero-img.main .slide{position:absolute;inset:0;opacity:0;animation:xslide 15s infinite;will-change:opacity}
+.hero-img.main .slide:nth-child(1){animation-delay:0s}
+.hero-img.main .slide:nth-child(2){animation-delay:5s}
+.hero-img.main .slide:nth-child(3){animation-delay:10s}
+.hero-img.main .slide img{width:100%;height:100%;object-fit:cover;display:block}
+
+@keyframes xslide{
+  0%   {opacity:0}
+  7%   {opacity:1}
+  33%  {opacity:1}
+  40%  {opacity:0}
+  100% {opacity:0}
+}
+.hero-img.main .slide{pointer-events:none}
+.hero-img.main .slide{pointer-events:none}
+@media(prefers-reduced-motion:reduce){
+  .hero-img.main .slide{animation:none;opacity:0}
+  .hero-img.main .slide:first-child{opacity:1}
+}
+
+/* hide js-only controls (no js wired) */
+.hero-img.main .h-ctr,
+.hero-img.main .dots{display:none}
+
+/* ============ airbnb-style cards ============ */
+.card{position:relative;border-radius:20px;background:#fff;overflow:hidden;box-shadow:0 2px 14px rgba(15,31,40,.08);transition:transform .32s cubic-bezier(.2,.8,.24,1),box-shadow .32s}
+.card:hover{transform:translateY(-8px);box-shadow:0 24px 46px rgba(15,31,40,.16)}
+.card figure{position:relative;overflow:hidden;margin:0;border-radius:0}
+.card figure img{width:100%;display:block;transition:transform .62s cubic-bezier(.2,.8,.24,1)}
+.card:hover figure img{transform:scale(1.08)}
+.card figure::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(9,20,27,.38));opacity:0;transition:opacity .32s}
+.card:hover figure::after{opacity:1}
+.card figure .geo{position:absolute;left:14px;bottom:14px;z-index:5;background:rgba(15,31,40,.72);color:#fff;font-size:.7rem;letter-spacing:.08em;padding:.38rem .75rem;border-radius:99px;backdrop-filter:blur(4px)}
+
+/* heart (airbnb save) */
+.card .fave{position:absolute;top:14px;right:14px;z-index:6;width:38px;height:38px;border:0;border-radius:50%;background:rgba(255,255,255,.9);color:#223642;font-size:1.05rem;cursor:pointer;display:grid;place-items:center;transition:.25s}
+.card .fave:hover{transform:scale(1.14);color:#e23e5c}
+.card.faved .fave{background:#e23e5c;color:#fff}
+
+/* price chip (airbnb) */
+.card .price{position:absolute;right:14px;bottom:14px;z-index:5;background:rgba(255,255,255,.94);color:#223642;font-weight:600;font-size:.8rem;padding:.4rem .7rem;border-radius:99px;box-shadow:0 3px 10px rgba(15,31,40,.14)}
+.card .price::before{content:"\2605";color:#c9a341}
